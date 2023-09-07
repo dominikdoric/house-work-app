@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:house_work_app/presentation/screens/familyNameScreen/enter_family_screen.dart';
+import 'package:house_work_app/presentation/screens/onboardingScreens/familyNameScreen/family_name_screen.dart';
 
 void main() {
   runApp(const MyApp());
