@@ -14,9 +14,18 @@ class OnboardingDoneScreenView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Congratulations!!!'),
-            const Text('You finished setting up your family information. '
-                'Now it"s turn to start with chores!'),
+            const Text(
+              'Congratulations!!!',
+              style: TextStyle(fontSize: 22),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+              child: Text(
+                'You finished setting up your family information. '
+                'Now its turn to start with chores!',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
             OutlinedButton(
               child: const Text(
                 'Finish',
