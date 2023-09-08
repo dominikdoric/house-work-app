@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house_work_app/presentation/screens/onboardingScreens/familyCountScreen/family_count_screen.dart';
 
 class FamilyNameScreenView extends StatelessWidget {
   FamilyNameScreenView({super.key});
@@ -45,11 +46,8 @@ class FamilyNameScreenView extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               onPressed: () {
-                const snackBar = SnackBar(
-                  content: Text('You successfully added your family name!'),
-                  duration: Duration(seconds: 2),
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const FamilyCountScreen()));
               },
             )
           ],
