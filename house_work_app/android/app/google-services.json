@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1096448793237",
+    "project_id": "house-work-app-702ed",
+    "storage_bucket": "house-work-app-702ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096448793237:android:05527a68cbf09ee5ad999c",
+        "android_client_info": {
+          "package_name": "com.example.house_work_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096448793237-2ltgj7qumreu16uj7k5uus28kkcb7kj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGRFxN_LBIfiwqoKRTYYWv6UPfxIz4DQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1096448793237-2ltgj7qumreu16uj7k5uus28kkcb7kj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
