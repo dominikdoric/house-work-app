@@ -1,12 +1,22 @@
+import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
 import 'package:house_work_app/domain/repository/onboarding_repository.dart';
+import 'package:injectable/injectable.dart';
 
+@Injectable(as: OnboardingRepository)
 class OnboardingRepositoryImpl extends OnboardingRepository {
-  @override
-  Future<void> saveOnboardingData() async => {};
+  final RemoteDataSource remoteDataSource;
+
+  OnboardingRepositoryImpl({required this.remoteDataSource});
 
   @override
-  Future<void> loginUser() async => {};
+  Future<void> saveOnboardingData() async =>
+      remoteDataSource.saveOnboardingData();
 
   @override
-  Future<void> registerUser() async => {};
+  Future<String?> loginUser(String email, String password) async =>
+      remoteDataSource.loginUser(email, password);
+
+  @override
+  Future<String?> registerUser(String email, String password) async =>
+      remoteDataSource.registerUser(email, password);
 }
