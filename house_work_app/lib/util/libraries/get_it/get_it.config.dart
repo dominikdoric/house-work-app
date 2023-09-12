@@ -51,13 +51,23 @@ extension GetItInjectableX on _i1.GetIt {
     );
     gh.factory<_i6.RemoteDataSource>(() => _i7.RemoteDataSourceImpl());
     gh.lazySingleton<_i8.SaveOnboardingDataUseCase>(
-        () => _i8.SaveOnboardingDataUseCase());
-    gh.factory<_i9.OnboardingRepository>(() => _i10.OnboardingRepositoryImpl(
-        remoteDataSource: gh<_i6.RemoteDataSource>()));
-    gh.lazySingleton<_i11.RegisterUserUseCase>(() => _i11.RegisterUserUseCase(
-        onboardingRepository: gh<_i9.OnboardingRepository>()));
-    gh.lazySingleton<_i12.LoginUserUseCase>(() => _i12.LoginUserUseCase(
-        onboardingRepository: gh<_i9.OnboardingRepository>()));
+      () => _i8.SaveOnboardingDataUseCase(),
+    );
+    gh.factory<_i9.OnboardingRepository>(
+      () => _i10.OnboardingRepositoryImpl(
+        remoteDataSource: gh<_i6.RemoteDataSource>(),
+      ),
+    );
+    gh.lazySingleton<_i11.RegisterUserUseCase>(
+      () => _i11.RegisterUserUseCase(
+        onboardingRepository: gh<_i9.OnboardingRepository>(),
+      ),
+    );
+    gh.lazySingleton<_i12.LoginUserUseCase>(
+      () => _i12.LoginUserUseCase(
+        onboardingRepository: gh<_i9.OnboardingRepository>(),
+      ),
+    );
     return this;
   }
 }

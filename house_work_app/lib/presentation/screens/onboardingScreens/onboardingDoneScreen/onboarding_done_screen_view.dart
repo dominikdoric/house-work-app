@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../homeScreen/home_screen.dart';
+import 'package:house_work_app/presentation/screens/homeScreen/home_screen.dart';
 
 class OnboardingDoneScreenView extends StatelessWidget {
   const OnboardingDoneScreenView({super.key});
@@ -32,8 +31,11 @@ class OnboardingDoneScreenView extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const HomeScreen()));
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const HomeScreen(),
+                  ),
+                );
               },
             ),
           ],

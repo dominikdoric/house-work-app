@@ -35,8 +35,9 @@ class FamilyNameScreenView extends StatelessWidget {
                     },
                   ),
                   border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                    gapPadding: 16.0,
+                    borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                  ),
                 ),
               ),
             ),
@@ -46,10 +47,13 @@ class FamilyNameScreenView extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const FamilyCountScreen()));
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const FamilyCountScreen(),
+                  ),
+                );
               },
-            )
+            ),
           ],
         ),
       ),

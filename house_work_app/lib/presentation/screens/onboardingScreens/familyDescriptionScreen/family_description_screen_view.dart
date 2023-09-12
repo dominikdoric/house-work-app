@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../onboardingDoneScreen/onboarding_done_screen.dart';
+import 'package:house_work_app/presentation/screens/onboardingScreens/onboardingDoneScreen/onboarding_done_screen.dart';
 
 class FamilyDescriptionScreenView extends StatelessWidget {
   const FamilyDescriptionScreenView({super.key});
@@ -38,8 +37,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -55,8 +55,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -76,8 +77,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -93,8 +95,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -114,8 +117,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -131,8 +135,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -152,8 +157,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -169,8 +175,9 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                        gapPadding: 16.0,
-                        borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      gapPadding: 16.0,
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    ),
                   ),
                 ),
               ),
@@ -180,8 +187,11 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                   style: TextStyle(fontSize: 18),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const OnboardingDoneScreen()));
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const OnboardingDoneScreen(),
+                    ),
+                  );
                 },
               ),
             ],

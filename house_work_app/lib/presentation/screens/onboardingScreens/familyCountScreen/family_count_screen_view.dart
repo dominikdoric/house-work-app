@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../familyDescriptionScreen/family_description_screen.dart';
+import 'package:house_work_app/presentation/screens/onboardingScreens/familyDescriptionScreen/family_description_screen.dart';
 
 class FamilyCountScreenView extends StatelessWidget {
   FamilyCountScreenView({super.key});
@@ -36,7 +35,7 @@ class FamilyCountScreenView extends StatelessWidget {
                   ),
                   border: const OutlineInputBorder(
                       gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0))),
+                      borderRadius: BorderRadius.all(Radius.circular(16.0)),),
                 ),
               ),
             ),
@@ -47,7 +46,7 @@ class FamilyCountScreenView extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const FamilyDescriptionScreen()));
+                    builder: (context) => const FamilyDescriptionScreen(),),);
               },
             ),
           ],
