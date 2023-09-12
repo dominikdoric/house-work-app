@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:house_work_app/presentation/screens/onboardingScreens/familyNameScreen/family_name_screen.dart';
 import 'package:house_work_app/util/libraries/firebase/firebase_options.dart';
-import 'package:house_work_app/presentation/screens/authenticationScreens/login_screen.dart';
 import 'package:house_work_app/util/libraries/get_it/get_it.dart';
 
 Future<void> main() async {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: const FamilyNameScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
