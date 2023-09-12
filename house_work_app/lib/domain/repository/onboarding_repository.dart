@@ -1,3 +1,5 @@
 abstract class OnboardingRepository {
-  Future<void> saveToFirebase();
+  Future<void> saveOnboardingData();
+  Future<void> loginUser();
+  Future<void> registerUser();
 }
