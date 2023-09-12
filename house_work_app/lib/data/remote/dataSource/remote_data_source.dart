@@ -1,2 +1,6 @@
 // Class for interacting with Firebase
-class RemoteDataSource {}
+abstract class RemoteDataSource {
+  Future<void> saveOnboardingData();
+  Future<void> loginUser();
+  Future<void> registerUser();
+}

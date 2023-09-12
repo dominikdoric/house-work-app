@@ -1,3 +1,3 @@
-class SaveOnboardingDataUseCase {
+class RegisterUserUseCase {
   Future<void> execute() async => {};
 }
