@@ -1,5 +1,5 @@
 abstract class OnboardingRepository {
   Future<void> saveOnboardingData();
-  Future<void> loginUser();
-  Future<void> registerUser();
+  Future<String?> loginUser(String email, String password);
+  Future<String?> registerUser(String email, String password);
 }

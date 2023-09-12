@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:house_work_app/domain/use_case/login_user_use_case.dart';
 import 'package:house_work_app/presentation/screens/authenticationScreens/create_account_screen.dart';
 import 'package:house_work_app/presentation/screens/homeScreen/home_screen.dart';
 import 'package:house_work_app/services/auth_service.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
+class LoginScreen extends StatelessWidget {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
