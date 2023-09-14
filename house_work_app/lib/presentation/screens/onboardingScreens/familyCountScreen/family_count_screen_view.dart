@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/familyDescriptionScreen/family_description_screen.dart';
+import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class FamilyCountScreenView extends StatelessWidget {
@@ -12,16 +13,16 @@ class FamilyCountScreenView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlue.shade50,
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(Dimensions.paddingMedium),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               Strings.familyMembersNumber,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: Dimensions.fontSizeMedium),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(Dimensions.paddingSmall),
               child: TextField(
                 controller: _textEditingController,
                 decoration: InputDecoration(
@@ -35,8 +36,10 @@ class FamilyCountScreenView extends StatelessWidget {
                     },
                   ),
                   border: const OutlineInputBorder(
-                    gapPadding: 16.0,
-                    borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    gapPadding: Dimensions.paddingMedium,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(Dimensions.paddingMedium),
+                    ),
                   ),
                 ),
               ),
@@ -44,7 +47,7 @@ class FamilyCountScreenView extends StatelessWidget {
             OutlinedButton(
               child: const Text(
                 Strings.submit,
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
               ),
               onPressed: () {
                 Navigator.of(context).push(

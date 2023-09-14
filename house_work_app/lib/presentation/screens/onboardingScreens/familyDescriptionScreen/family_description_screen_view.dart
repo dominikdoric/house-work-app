@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/onboardingDoneScreen/onboarding_done_screen.dart';
+import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class FamilyDescriptionScreenView extends StatelessWidget {
@@ -10,24 +11,24 @@ class FamilyDescriptionScreenView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlue.shade50,
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: const EdgeInsets.all(Dimensions.paddingLarge),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Padding(
-                padding: EdgeInsets.only(left: 16.0),
+                padding: EdgeInsets.only(left: Dimensions.paddingMedium),
                 child: Text(
                   Strings.familyMembersInfo,
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: Dimensions.fontSizeMedium),
                 ),
               ),
               const Text(
                 'First',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.firstFamilyMemberName,
@@ -38,14 +39,16 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gapPadding: Dimensions.paddingMedium,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.paddingMedium),
+                      ),
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.firstFamilyMemberPassword,
@@ -56,18 +59,20 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gapPadding: Dimensions.paddingMedium,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.paddingMedium),
+                      ),
                     ),
                   ),
                 ),
               ),
               const Text(
                 'Second',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.secondFamilyMemberName,
@@ -78,14 +83,16 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gapPadding: Dimensions.paddingMedium,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.paddingMedium),
+                      ),
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.secondFamilyMemberPassword,
@@ -96,18 +103,20 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gapPadding: Dimensions.paddingMedium,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.paddingMedium),
+                      ),
                     ),
                   ),
                 ),
               ),
               const Text(
                 'Third',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.thirdFamilyMemberName,
@@ -118,14 +127,14 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
+                      gapPadding: Dimensions.paddingMedium,
                       borderRadius: BorderRadius.all(Radius.circular(16.0)),
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.thirdFamilyMemberPassword,
@@ -136,18 +145,20 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gapPadding: Dimensions.paddingMedium,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.paddingMedium),
+                      ),
                     ),
                   ),
                 ),
               ),
               const Text(
                 'Fourth',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.fourthFamilyMemberName,
@@ -158,14 +169,16 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gapPadding: Dimensions.paddingMedium,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.paddingMedium),
+                      ),
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: Strings.fourthFamilyMemberPassword,
@@ -176,8 +189,10 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                       onPressed: () {},
                     ),
                     border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                      gapPadding: Dimensions.paddingMedium,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.paddingMedium),
+                      ),
                     ),
                   ),
                 ),
@@ -185,7 +200,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
               OutlinedButton(
                 child: const Text(
                   Strings.submit,
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: Dimensions.fontSizeMedium),
                 ),
                 onPressed: () {
                   Navigator.of(context).push(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/homeScreen/home_screen.dart';
+import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class OnboardingDoneScreenView extends StatelessWidget {
@@ -10,25 +11,27 @@ class OnboardingDoneScreenView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlue.shade50,
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(Dimensions.paddingMedium),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
               Strings.congratulations,
-              style: TextStyle(fontSize: 22),
+              style: TextStyle(fontSize: Dimensions.fontSizeMedium),
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 16.0, bottom: 16.0),
+              padding: EdgeInsets.only(
+                  top: Dimensions.paddingMedium,
+                  bottom: Dimensions.paddingMedium),
               child: Text(
                 Strings.finishedFamilyInfoSetup,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
               ),
             ),
             OutlinedButton(
               child: const Text(
                 Strings.finish,
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
               ),
               onPressed: () {
                 Navigator.of(context).push(
