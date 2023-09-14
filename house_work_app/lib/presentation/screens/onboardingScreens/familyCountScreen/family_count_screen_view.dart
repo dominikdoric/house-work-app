@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/familyDescriptionScreen/family_description_screen.dart';
+import 'package:house_work_app/util/strings.dart';
 
 class FamilyCountScreenView extends StatelessWidget {
   FamilyCountScreenView({super.key});
@@ -16,7 +17,7 @@ class FamilyCountScreenView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Enter number of family members',
+              Strings.familyMembersNumber,
               style: TextStyle(fontSize: 20),
             ),
             Padding(
@@ -24,8 +25,8 @@ class FamilyCountScreenView extends StatelessWidget {
               child: TextField(
                 controller: _textEditingController,
                 decoration: InputDecoration(
-                  labelText: 'Family members count',
-                  hintText: 'Family members count',
+                  labelText: Strings.familyMembersCount,
+                  hintText: Strings.familyMembersCount,
                   prefixIcon: const Icon(Icons.person),
                   suffixIcon: IconButton(
                     icon: const Icon(Icons.clear),
@@ -34,19 +35,23 @@ class FamilyCountScreenView extends StatelessWidget {
                     },
                   ),
                   border: const OutlineInputBorder(
-                      gapPadding: 16.0,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),),
+                    gapPadding: 16.0,
+                    borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                  ),
                 ),
               ),
             ),
             OutlinedButton(
               child: const Text(
-                'Submit',
+                Strings.submit,
                 style: TextStyle(fontSize: 18),
               ),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const FamilyDescriptionScreen(),),);
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const FamilyDescriptionScreen(),
+                  ),
+                );
               },
             ),
           ],

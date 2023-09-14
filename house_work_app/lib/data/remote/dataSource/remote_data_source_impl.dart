@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
+import 'package:house_work_app/util/strings.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: RemoteDataSource)
@@ -14,14 +15,14 @@ class RemoteDataSourceImpl extends RemoteDataSource {
         email: email,
         password: password,
       );
-      return 'Success';
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        return 'No user found for that email.';
-      } else if (e.code == 'wrong-password') {
-        return 'Wrong password provided for that user.';
+      return Strings.success;
+    } on FirebaseAuthException catch (exception) {
+      if (exception.code == 'user-not-found') {
+        return Strings.noUserFound;
+      } else if (exception.code == 'wrong-password') {
+        return Strings.wrongPassword;
       } else {
-        return e.message;
+        return exception.message;
       }
     } catch (e) {
       return e.toString();
@@ -34,12 +35,12 @@ class RemoteDataSourceImpl extends RemoteDataSource {
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
 
-      return 'Success';
+      return Strings.success;
     } on FirebaseAuthException catch (exception) {
       if (exception.code == 'weak-password') {
-        return 'The password is to weak';
+        return Strings.passwordWeak;
       } else if (exception.code == 'email-already-in-use') {
-        return 'The account already exists for that email.';
+        return Strings.accountExists;
       } else {
         return exception.message;
       }

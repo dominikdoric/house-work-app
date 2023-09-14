@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:house_work_app/presentation/screens/onboardingScreens/familyNameScreen/family_name_screen.dart';
+import 'package:house_work_app/presentation/screens/homeScreen/home_screen.dart';
 import 'package:house_work_app/util/libraries/firebase/firebase_options.dart';
 import 'package:house_work_app/util/libraries/get_it/get_it.dart';
+import 'package:house_work_app/util/strings.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,12 +18,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: Strings.applicationName,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FamilyNameScreen(),
+      home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

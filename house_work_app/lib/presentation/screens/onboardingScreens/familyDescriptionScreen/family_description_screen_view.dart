@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/onboardingDoneScreen/onboarding_done_screen.dart';
+import 'package:house_work_app/util/strings.dart';
 
 class FamilyDescriptionScreenView extends StatelessWidget {
   const FamilyDescriptionScreenView({super.key});
@@ -17,7 +18,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(left: 16.0),
                 child: Text(
-                  'Enter every family member information.',
+                  Strings.familyMembersInfo,
                   style: TextStyle(fontSize: 20),
                 ),
               ),
@@ -29,8 +30,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'First family member name',
-                    hintText: 'First family member name',
+                    labelText: Strings.firstFamilyMemberName,
+                    hintText: Strings.firstFamilyMemberName,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -47,8 +48,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'First family member password',
-                    hintText: 'First family member password',
+                    labelText: Strings.firstFamilyMemberPassword,
+                    hintText: Strings.firstFamilyMemberPassword,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -69,8 +70,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'Second family member name',
-                    hintText: 'Second family member name',
+                    labelText: Strings.secondFamilyMemberName,
+                    hintText: Strings.secondFamilyMemberName,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -87,8 +88,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'Second family member password',
-                    hintText: 'Second family member password',
+                    labelText: Strings.secondFamilyMemberPassword,
+                    hintText: Strings.secondFamilyMemberPassword,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -109,8 +110,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'Third family member name',
-                    hintText: 'Third family member name',
+                    labelText: Strings.thirdFamilyMemberName,
+                    hintText: Strings.thirdFamilyMemberName,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -127,8 +128,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'Third family member password',
-                    hintText: 'Third family member password',
+                    labelText: Strings.thirdFamilyMemberPassword,
+                    hintText: Strings.thirdFamilyMemberPassword,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -149,8 +150,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'Fourth family member name',
-                    hintText: 'Fourth family member name',
+                    labelText: Strings.fourthFamilyMemberName,
+                    hintText: Strings.fourthFamilyMemberName,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -167,8 +168,8 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   decoration: InputDecoration(
-                    labelText: 'Fourth family member password',
-                    hintText: 'Fourth family member password',
+                    labelText: Strings.fourthFamilyMemberPassword,
+                    hintText: Strings.fourthFamilyMemberPassword,
                     prefixIcon: const Icon(Icons.person),
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.clear),
@@ -183,7 +184,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
               ),
               OutlinedButton(
                 child: const Text(
-                  'Submit',
+                  Strings.submit,
                   style: TextStyle(fontSize: 18),
                 ),
                 onPressed: () {

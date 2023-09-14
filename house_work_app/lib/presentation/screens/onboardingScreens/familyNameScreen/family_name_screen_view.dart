@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/familyCountScreen/family_count_screen.dart';
+import 'package:house_work_app/util/strings.dart';
 
 class FamilyNameScreenView extends StatelessWidget {
   FamilyNameScreenView({super.key});
@@ -16,7 +17,7 @@ class FamilyNameScreenView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Enter your family name below.',
+              Strings.enterFamilyName,
               style: TextStyle(fontSize: 20.0),
             ),
             Padding(
@@ -24,8 +25,8 @@ class FamilyNameScreenView extends StatelessWidget {
               child: TextField(
                 controller: _textEditingController,
                 decoration: InputDecoration(
-                  labelText: 'Family name',
-                  hintText: 'Family name',
+                  labelText: Strings.familyName,
+                  hintText: Strings.familyName,
                   prefixIcon: const Icon(Icons.person),
                   suffixIcon: IconButton(
                     icon: const Icon(Icons.clear),
@@ -43,7 +44,7 @@ class FamilyNameScreenView extends StatelessWidget {
             ),
             OutlinedButton(
               child: const Text(
-                'Submit',
+                Strings.submit,
                 style: TextStyle(fontSize: 18),
               ),
               onPressed: () {
