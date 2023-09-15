@@ -1,6 +1,8 @@
+import 'package:house_work_app/data/remote/model/familyInfo/family_info_dto.dart';
+
 abstract class RemoteDataSource {
   Future<void> saveOnboardingData();
   Future<String?> loginUser(String email, String password);
   Future<String?> registerUser(String email, String password);
-  Future<String> getFamilyName();
+  Future<FamilyInfoDTO> getFamilyName();
 }

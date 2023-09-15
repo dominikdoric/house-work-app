@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
+import 'package:house_work_app/data/remote/model/familyInfo/family_info_dto.dart';
 import 'package:house_work_app/util/strings.dart';
 import 'package:injectable/injectable.dart';
 
@@ -53,11 +54,25 @@ class RemoteDataSourceImpl extends RemoteDataSource {
   }
 
   @override
-  Future<String> getFamilyName() async {
+  Future<FamilyInfoDTO> getFamilyName() async {
     try {
       final familyName = FirebaseFirestore.instance.collection('family_name');
       final querySnapshot = await familyName.get();
-      return querySnapshot.docs.toString();
+
+      if (querySnapshot.docs.isEmpty) {
+        throw Exception('No family name documents found');
+      }
+
+      final familyInfoDocument = querySnapshot.docs.first;
+
+      final familyInfo = FamilyInfoDTO(
+        id: familyInfoDocument['id'] as int,
+        familyName: familyInfoDocument['familyName'] as String,
+        familyMembersCount: familyInfoDocument['familyMembersCount'] as int,
+        familyMember: [],
+      );
+
+      return familyInfo;
     } catch (exception) {
       log('Error accessing Firestore: $exception');
       rethrow;

@@ -1,4 +1,5 @@
 import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
+import 'package:house_work_app/data/remote/model/familyInfo/family_info_dto.dart';
 import 'package:house_work_app/domain/repository/onboarding_repository.dart';
 import 'package:injectable/injectable.dart';
 
@@ -21,5 +22,6 @@ class OnboardingRepositoryImpl extends OnboardingRepository {
       remoteDataSource.registerUser(email, password);
 
   @override
-  Future<String> getFamilyName() async => remoteDataSource.getFamilyName();
+  Future<FamilyInfoDTO> getFamilyName() async =>
+      remoteDataSource.getFamilyName();
 }
