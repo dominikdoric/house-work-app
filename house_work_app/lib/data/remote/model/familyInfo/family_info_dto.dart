@@ -9,6 +9,6 @@ class FamilyInfoDTO with _$FamilyInfoDTO {
     required int id,
     required String familyName,
     required int familyMembersCount,
-    required List<FamilyMemberDTO> familyMember,
+    required List<FamilyMemberDTO> familyMembers,
   }) = _FamilyInfoDTO;
 }

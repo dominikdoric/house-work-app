@@ -69,7 +69,7 @@ class RemoteDataSourceImpl extends RemoteDataSource {
         id: familyInfoDocument['id'] as int,
         familyName: familyInfoDocument['familyName'] as String,
         familyMembersCount: familyInfoDocument['familyMembersCount'] as int,
-        familyMember: [],
+        familyMembers: [],
       );
 
       return familyInfo;
