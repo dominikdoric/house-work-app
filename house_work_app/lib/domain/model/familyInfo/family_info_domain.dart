@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:house_work_app/data/remote/model/familyInfo/family_info_dto.dart';
 import 'package:house_work_app/domain/model/familyMember/family_member_domain.dart';
 
 part 'family_info_domain.freezed.dart';
@@ -11,4 +12,13 @@ class FamilyInfoDomain with _$FamilyInfoDomain {
     required int familyMembersCount,
     required List<FamilyMemberDomain> familyMembers,
   }) = _FamilyInfoDomain;
+}
+
+FamilyInfoDomain fromFamilyInfoDto(FamilyInfoDTO familyInfoDTO) {
+  return FamilyInfoDomain(
+    id: familyInfoDTO.id,
+    familyName: familyInfoDTO.familyName,
+    familyMembersCount: familyInfoDTO.familyMembersCount,
+    familyMembers: familyInfoDTO.familyMembers,
+  );
 }

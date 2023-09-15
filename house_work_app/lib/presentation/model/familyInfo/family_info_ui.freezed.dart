@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$FamilyInfoUI {
   int get id => throw _privateConstructorUsedError;
   String get familyName => throw _privateConstructorUsedError;
-  int get familyMemberCount => throw _privateConstructorUsedError;
+  int get familyMembersCount => throw _privateConstructorUsedError;
   List<FamilyMemberUI> get familyMembers => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -35,7 +35,7 @@ abstract class $FamilyInfoUICopyWith<$Res> {
   $Res call(
       {int id,
       String familyName,
-      int familyMemberCount,
+      int familyMembersCount,
       List<FamilyMemberUI> familyMembers});
 }
 
@@ -54,7 +54,7 @@ class _$FamilyInfoUICopyWithImpl<$Res, $Val extends FamilyInfoUI>
   $Res call({
     Object? id = null,
     Object? familyName = null,
-    Object? familyMemberCount = null,
+    Object? familyMembersCount = null,
     Object? familyMembers = null,
   }) {
     return _then(_value.copyWith(
@@ -66,9 +66,9 @@ class _$FamilyInfoUICopyWithImpl<$Res, $Val extends FamilyInfoUI>
           ? _value.familyName
           : familyName // ignore: cast_nullable_to_non_nullable
               as String,
-      familyMemberCount: null == familyMemberCount
-          ? _value.familyMemberCount
-          : familyMemberCount // ignore: cast_nullable_to_non_nullable
+      familyMembersCount: null == familyMembersCount
+          ? _value.familyMembersCount
+          : familyMembersCount // ignore: cast_nullable_to_non_nullable
               as int,
       familyMembers: null == familyMembers
           ? _value.familyMembers
@@ -89,7 +89,7 @@ abstract class _$$_FamilyInfoUICopyWith<$Res>
   $Res call(
       {int id,
       String familyName,
-      int familyMemberCount,
+      int familyMembersCount,
       List<FamilyMemberUI> familyMembers});
 }
 
@@ -106,7 +106,7 @@ class __$$_FamilyInfoUICopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? familyName = null,
-    Object? familyMemberCount = null,
+    Object? familyMembersCount = null,
     Object? familyMembers = null,
   }) {
     return _then(_$_FamilyInfoUI(
@@ -118,9 +118,9 @@ class __$$_FamilyInfoUICopyWithImpl<$Res>
           ? _value.familyName
           : familyName // ignore: cast_nullable_to_non_nullable
               as String,
-      familyMemberCount: null == familyMemberCount
-          ? _value.familyMemberCount
-          : familyMemberCount // ignore: cast_nullable_to_non_nullable
+      familyMembersCount: null == familyMembersCount
+          ? _value.familyMembersCount
+          : familyMembersCount // ignore: cast_nullable_to_non_nullable
               as int,
       familyMembers: null == familyMembers
           ? _value._familyMembers
@@ -136,7 +136,7 @@ class _$_FamilyInfoUI implements _FamilyInfoUI {
   const _$_FamilyInfoUI(
       {required this.id,
       required this.familyName,
-      required this.familyMemberCount,
+      required this.familyMembersCount,
       required final List<FamilyMemberUI> familyMembers})
       : _familyMembers = familyMembers;
 
@@ -145,7 +145,7 @@ class _$_FamilyInfoUI implements _FamilyInfoUI {
   @override
   final String familyName;
   @override
-  final int familyMemberCount;
+  final int familyMembersCount;
   final List<FamilyMemberUI> _familyMembers;
   @override
   List<FamilyMemberUI> get familyMembers {
@@ -156,7 +156,7 @@ class _$_FamilyInfoUI implements _FamilyInfoUI {
 
   @override
   String toString() {
-    return 'FamilyInfoUI(id: $id, familyName: $familyName, familyMemberCount: $familyMemberCount, familyMembers: $familyMembers)';
+    return 'FamilyInfoUI(id: $id, familyName: $familyName, familyMembersCount: $familyMembersCount, familyMembers: $familyMembers)';
   }
 
   @override
@@ -167,15 +167,15 @@ class _$_FamilyInfoUI implements _FamilyInfoUI {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.familyName, familyName) ||
                 other.familyName == familyName) &&
-            (identical(other.familyMemberCount, familyMemberCount) ||
-                other.familyMemberCount == familyMemberCount) &&
+            (identical(other.familyMembersCount, familyMembersCount) ||
+                other.familyMembersCount == familyMembersCount) &&
             const DeepCollectionEquality()
                 .equals(other._familyMembers, _familyMembers));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, id, familyName,
-      familyMemberCount, const DeepCollectionEquality().hash(_familyMembers));
+      familyMembersCount, const DeepCollectionEquality().hash(_familyMembers));
 
   @JsonKey(ignore: true)
   @override
@@ -188,7 +188,7 @@ abstract class _FamilyInfoUI implements FamilyInfoUI {
   const factory _FamilyInfoUI(
       {required final int id,
       required final String familyName,
-      required final int familyMemberCount,
+      required final int familyMembersCount,
       required final List<FamilyMemberUI> familyMembers}) = _$_FamilyInfoUI;
 
   @override
@@ -196,7 +196,7 @@ abstract class _FamilyInfoUI implements FamilyInfoUI {
   @override
   String get familyName;
   @override
-  int get familyMemberCount;
+  int get familyMembersCount;
   @override
   List<FamilyMemberUI> get familyMembers;
   @override

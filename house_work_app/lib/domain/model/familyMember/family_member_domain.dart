@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:house_work_app/data/remote/model/familyMember/family_member_dto.dart';
 
 part 'family_member_domain.freezed.dart';
 
@@ -9,4 +10,12 @@ class FamilyMemberDomain with _$FamilyMemberDomain {
     required String name,
     required String password,
   }) = _FamilyMemberDomain;
+}
+
+FamilyMemberDomain fromFamilyMemberDto(FamilyMemberDTO familyMemberDTO) {
+  return FamilyMemberDomain(
+    id: familyMemberDTO.id,
+    name: familyMemberDTO.name,
+    password: familyMemberDTO.password,
+  );
 }
