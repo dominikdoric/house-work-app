@@ -19,4 +19,7 @@ class OnboardingRepositoryImpl extends OnboardingRepository {
   @override
   Future<String?> registerUser(String email, String password) async =>
       remoteDataSource.registerUser(email, password);
+
+  @override
+  Future<String> getFamilyName() async => remoteDataSource.getFamilyName();
 }

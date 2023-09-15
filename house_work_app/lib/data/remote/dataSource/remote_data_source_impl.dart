@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
 import 'package:house_work_app/util/strings.dart';
@@ -46,6 +49,18 @@ class RemoteDataSourceImpl extends RemoteDataSource {
       }
     } catch (exception) {
       return exception.toString();
+    }
+  }
+
+  @override
+  Future<String> getFamilyName() async {
+    try {
+      final familyName = FirebaseFirestore.instance.collection('family_name');
+      final querySnapshot = await familyName.get();
+      return querySnapshot.docs.toString();
+    } catch (exception) {
+      log('Error accessing Firestore: $exception');
+      rethrow;
     }
   }
 }

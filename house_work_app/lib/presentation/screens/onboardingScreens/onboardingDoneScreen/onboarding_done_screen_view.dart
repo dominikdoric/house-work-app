@@ -21,8 +21,9 @@ class OnboardingDoneScreenView extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.only(
-                  top: Dimensions.paddingMedium,
-                  bottom: Dimensions.paddingMedium),
+                top: Dimensions.paddingMedium,
+                bottom: Dimensions.paddingMedium,
+              ),
               child: Text(
                 Strings.finishedFamilyInfoSetup,
                 style: TextStyle(fontSize: Dimensions.fontSizeMedium),
