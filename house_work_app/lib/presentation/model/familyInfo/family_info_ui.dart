@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:house_work_app/domain/model/familyInfo/family_info_domain.dart';
+import 'package:house_work_app/domain/model/familyMember/family_member_domain.dart';
 import 'package:house_work_app/presentation/model/familyMember/family_member_ui.dart';
 
 part 'family_info_ui.freezed.dart';
@@ -19,6 +20,8 @@ FamilyInfoUI fromFamilyInfoDomain(FamilyInfoDomain familyInfoDomain) {
     id: familyInfoDomain.id,
     familyName: familyInfoDomain.familyName,
     familyMembersCount: familyInfoDomain.familyMembersCount,
-    familyMembers: familyInfoDomain.familyMembers,
+    familyMembers: fromFamilyMemberDomain(
+      familyInfoDomain.familyMembers as FamilyMemberDomain,
+    ) as List<FamilyMemberUI>,
   );
 }
