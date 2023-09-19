@@ -31,4 +31,9 @@ class Strings {
   static const dominik = 'Dominik';
   static const jasna = 'Jasna';
   static const drazen = 'Dražen';
+
+  // Board chore status
+  static const toDo = 'To do';
+  static const inProgress = 'In progress';
+  static const done = 'Done';
 }
