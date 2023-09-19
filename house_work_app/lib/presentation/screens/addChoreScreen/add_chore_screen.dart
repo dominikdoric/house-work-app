@@ -12,7 +12,7 @@ class AddChoreScreen extends StatelessWidget {
         backgroundColor: Colors.lightBlue.shade50,
       ),
       body: const Center(
-        child: Text('This is the Add Chore screen'),
+        child: Text(Strings.addChoreScreen),
       ),
     );
   }

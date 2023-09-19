@@ -1,5 +1,5 @@
 class Strings {
-  static const applicationName = 'House Work application';
+  static const applicationName = 'House Work';
   static const addChoreScreen = 'Add Chore Screen';
   static const success = 'Success';
   static const noUserFound = 'No user found for that email.';
@@ -25,4 +25,10 @@ class Strings {
       'Now its turn to start with chores!';
   static const submit = 'Submit';
   static const finish = 'Finish';
+
+  // Family member names
+  static const leonarda = 'Leonarda';
+  static const dominik = 'Dominik';
+  static const jasna = 'Jasna';
+  static const drazen = 'Dražen';
 }
