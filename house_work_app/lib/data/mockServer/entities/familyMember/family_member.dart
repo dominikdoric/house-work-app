@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:house_work_app/mockServer/entities/chore.dart';
+import 'package:house_work_app/data/mockServer/entities/chore/chore.dart';
 
 class FamilyMember {
   final String name;
