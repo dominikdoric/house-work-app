@@ -13,6 +13,7 @@ class MemberPlaceholder extends StatelessWidget {
         children: [
           Center(
             child: Card(
+              color: Colors.indigo.shade50,
               elevation: 5,
               child: Padding(
                 padding: const EdgeInsets.all(14.0),

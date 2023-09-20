@@ -7,14 +7,17 @@ class HeaderMemberSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        MemberPlaceholder(name: Strings.leonarda),
-        MemberPlaceholder(name: Strings.dominik),
-        MemberPlaceholder(name: Strings.jasna),
-        MemberPlaceholder(name: Strings.drazen),
-      ],
+    return ColoredBox(
+      color: Colors.indigo.shade100,
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          MemberPlaceholder(name: Strings.leonarda),
+          MemberPlaceholder(name: Strings.dominik),
+          MemberPlaceholder(name: Strings.jasna),
+          MemberPlaceholder(name: Strings.drazen),
+        ],
+      ),
     );
   }
 }

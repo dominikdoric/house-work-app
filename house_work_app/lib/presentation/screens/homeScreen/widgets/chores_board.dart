@@ -4,18 +4,50 @@ import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class ChoresBoard extends StatelessWidget {
-  const ChoresBoard({super.key});
+  ChoresBoard({super.key});
+
+  List<String> toDoList = [
+    'Clean the kitchen',
+    'Vacuum the living room',
+    'Take out the trash',
+    'Wash the dishes',
+    'Sweep the floors',
+    'Fold laundry',
+  ];
+
+  List<String> inProgressList = [
+    'Mow the lawn',
+    'Water the plants',
+    'Dust the shelves',
+  ];
+
+  List<String> doneList = [
+    'Fold laundry',
+    'Organize the closet',
+    'Clean the bathroom',
+    'Cook dinner',
+    'Organize the closet',
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       height: 650.0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          StatusCell(statusName: Strings.toDo),
-          StatusCell(statusName: Strings.inProgress),
-          StatusCell(statusName: Strings.done),
+          StatusCell(
+            statusName: Strings.toDo,
+            choresDescriptions: toDoList,
+          ),
+          StatusCell(
+            statusName: Strings.inProgress,
+            choresDescriptions: inProgressList,
+          ),
+          StatusCell(
+            statusName: Strings.done,
+            choresDescriptions: doneList,
+          ),
         ],
       ),
     );
