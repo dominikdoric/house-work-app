@@ -1,6 +1,13 @@
 class Strings {
   static const applicationName = 'House Work';
-  static const addChoreScreen = 'Add Chore Screen';
+  static const addChoreScreen = 'Add chore';
+  static const addChoreScreenDescription =
+      'Here wou will be able to create new chore and assign '
+      'chore to someone.';
+  static const choreScreen = 'Chore details';
+  static const choreScreenDescription =
+      'Here you will be able to see description of chore and'
+      ' change the status of chore';
   static const success = 'Success';
   static const noUserFound = 'No user found for that email.';
   static const wrongPassword = 'Wrong password provided for that user.';

@@ -11,8 +11,11 @@ class AddChoreScreen extends StatelessWidget {
         title: const Text(Strings.addChoreScreen),
         backgroundColor: Colors.lightBlue.shade50,
       ),
-      body: const Center(
-        child: Text(Strings.addChoreScreen),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Center(
+          child: Text(Strings.addChoreScreenDescription),
+        ),
       ),
     );
   }
