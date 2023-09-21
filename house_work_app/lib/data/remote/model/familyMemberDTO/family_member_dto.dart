@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:house_work_app/betaServer/entities/familyMemberMock/family_member_mock.dart';
 import 'package:house_work_app/data/remote/model/choreDTO/chore_dto.dart';
 
 part 'family_member_dto.freezed.dart';
@@ -10,4 +11,12 @@ class FamilyMemberDTO with _$FamilyMemberDTO {
     required String name,
     required List<ChoreDTO> choresList,
   }) = _FamilyMemberDTO;
+}
+
+FamilyMemberDTO fromFamilyMemberMock(FamilyMemberMock familyMemberMock) {
+  return FamilyMemberDTO(
+    id: familyMemberMock.id,
+    name: familyMemberMock.name,
+    choresList: familyMemberMock.choresList,
+  );
 }

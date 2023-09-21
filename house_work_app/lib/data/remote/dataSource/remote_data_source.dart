@@ -1,5 +1,5 @@
-import 'package:house_work_app/betaServer/entities/familyMemberMock/family_member_mock.dart';
+import 'package:house_work_app/data/remote/model/familyMemberDTO/family_member_dto.dart';
 
 abstract class RemoteDataSource {
-  FamilyMemberMock getFamilyMemberInfo(String name);
+  FamilyMemberDTO getFamilyMemberInfo(String name);
 }
