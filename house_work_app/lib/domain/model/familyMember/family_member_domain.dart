@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:house_work_app/data/remote/model/familyMember/family_member_dto.dart';
+import 'package:house_work_app/data/remote/model/familyMemberDTO/family_member_dto.dart';
 
 part 'family_member_domain.freezed.dart';
 

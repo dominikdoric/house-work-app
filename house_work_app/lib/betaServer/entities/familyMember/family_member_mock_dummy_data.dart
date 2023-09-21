@@ -1,23 +1,27 @@
-import 'package:house_work_app/betaServer/entities/chore/chore.dart';
-import 'package:house_work_app/betaServer/entities/chore/chore_dummy_data.dart';
-import 'package:house_work_app/betaServer/entities/familyMember/family_member.dart';
+import 'package:house_work_app/betaServer/entities/chore/chore_mock.dart';
+import 'package:house_work_app/betaServer/entities/chore/chore_mock_dummy_data.dart';
+import 'package:house_work_app/betaServer/entities/familyMember/family_member_mock.dart';
 
 final leonardaInfo = FamilyMember(
+  id: 1,
   name: 'Leonarda',
   listOfChores: leonardaChoresList,
 );
 
 final dominikInfo = FamilyMember(
+  id: 2,
   name: 'Dominik',
   listOfChores: dominikChoresList,
 );
 
 final jasnaInfo = FamilyMember(
+  id: 3,
   name: 'Jasna',
   listOfChores: jasnaChoresList,
 );
 
 final drazenInfo = FamilyMember(
+  id: 4,
   name: 'Dražen',
   listOfChores: drazenChoresList,
 );

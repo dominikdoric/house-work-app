@@ -1,11 +1,13 @@
 import 'package:flutter/foundation.dart';
-import 'package:house_work_app/betaServer/entities/chore/chore.dart';
+import 'package:house_work_app/betaServer/entities/chore/chore_mock.dart';
 
 class FamilyMember {
+  final int id;
   final String name;
   final List<Chore> listOfChores;
 
   FamilyMember({
+    required this.id,
     required this.name,
     required this.listOfChores,
   });

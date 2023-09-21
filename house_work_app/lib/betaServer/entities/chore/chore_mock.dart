@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 class Chore {
+  final int id;
   final String name;
   final String description;
   final String createdAt;
@@ -8,6 +9,7 @@ class Chore {
   final String status;
 
   Chore({
+    required this.id,
     required this.name,
     required this.description,
     required this.createdAt,
@@ -24,6 +26,7 @@ class Chore {
   void displayInfo() {
     if (kDebugMode) {
       print(
+        'Id: $id, '
         'Name: $name, '
         'Description: $description, '
         'Created at: $createdAt, '
