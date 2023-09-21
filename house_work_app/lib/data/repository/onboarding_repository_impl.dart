@@ -1,3 +1,4 @@
+import 'package:house_work_app/data/mockServer/entities/chore/chore.dart';
 import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
 import 'package:house_work_app/data/remote/model/familyInfo/family_info_dto.dart';
 import 'package:house_work_app/domain/repository/onboarding_repository.dart';
@@ -24,4 +25,8 @@ class OnboardingRepositoryImpl extends OnboardingRepository {
   @override
   Future<FamilyInfoDTO> getFamilyName() async =>
       remoteDataSource.getFamilyName();
+
+  @override
+  List<Chore> getListOfMemberChores(String name) =>
+      remoteDataSource.getListOfMemberChores(name);
 }

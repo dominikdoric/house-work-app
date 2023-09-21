@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/addChoreScreen/add_chore_screen.dart';
+import 'package:house_work_app/presentation/screens/homeScreen/home_screen_view.dart';
 import 'package:house_work_app/util/strings.dart';
-
-import 'home_screen_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

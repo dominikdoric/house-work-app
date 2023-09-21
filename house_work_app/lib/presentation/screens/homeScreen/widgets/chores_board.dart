@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/homeScreen/widgets/status_cell.dart';
-import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class ChoresBoard extends StatelessWidget {

@@ -1,7 +1,8 @@
 import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:house_work_app/data/mockServer/entities/chore/chore.dart';
+import 'package:house_work_app/data/mockServer/entities/familyMember/family_member_dummy_data.dart';
 import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
 import 'package:house_work_app/data/remote/model/familyInfo/family_info_dto.dart';
 import 'package:house_work_app/util/strings.dart';
@@ -76,6 +77,22 @@ class RemoteDataSourceImpl extends RemoteDataSource {
     } catch (exception) {
       log('Error accessing Firestore: $exception');
       rethrow;
+    }
+  }
+
+  @override
+  List<Chore> getListOfMemberChores(String member) {
+    switch (member) {
+      case 'Leonarda':
+        return leonardaChoresList;
+      case 'Dominik':
+        return dominikChoresList;
+      case 'Jasna':
+        return jasnaChoresList;
+      case 'Dražen':
+        return drazenChoresList;
+      default:
+        throw Exception();
     }
   }
 }
