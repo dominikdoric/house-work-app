@@ -2,22 +2,22 @@ import 'package:house_work_app/data/mockServer/entities/chore/chore.dart';
 import 'package:house_work_app/data/mockServer/entities/chore/chore_dummy_data.dart';
 import 'package:house_work_app/data/mockServer/entities/familyMember/family_member.dart';
 
-final leonarda = FamilyMember(
+final leonardaInfo = FamilyMember(
   name: 'Leonarda',
   listOfChores: leonardaChoresList,
 );
 
-final dominik = FamilyMember(
+final dominikInfo = FamilyMember(
   name: 'Dominik',
   listOfChores: dominikChoresList,
 );
 
-final jasna = FamilyMember(
+final jasnaInfo = FamilyMember(
   name: 'Jasna',
   listOfChores: jasnaChoresList,
 );
 
-final drazen = FamilyMember(
+final drazenInfo = FamilyMember(
   name: 'Dražen',
   listOfChores: drazenChoresList,
 );

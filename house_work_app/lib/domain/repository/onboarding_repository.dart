@@ -1,10 +1,5 @@
-import 'package:house_work_app/data/mockServer/entities/chore/chore.dart';
-import 'package:house_work_app/data/remote/model/familyInfo/family_info_dto.dart';
+import 'package:house_work_app/data/mockServer/entities/familyMember/family_member.dart';
 
 abstract class OnboardingRepository {
-  Future<void> saveOnboardingData();
-  Future<String?> loginUser(String email, String password);
-  Future<String?> registerUser(String email, String password);
-  Future<FamilyInfoDTO> getFamilyName();
-  List<Chore> getListOfMemberChores(String name);
+  FamilyMember getFamilyMemberInfo(String name);
 }
