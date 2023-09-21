@@ -1,4 +1,4 @@
-import 'package:house_work_app/betaServer/entities/familyMemberMock/family_member_mock.dart';
+import 'package:house_work_app/domain/model/familyMemberDomain/family_member_domain.dart';
 import 'package:house_work_app/domain/repository/house_work_repository.dart';
 import 'package:injectable/injectable.dart';
 
@@ -12,5 +12,5 @@ class GetFamilyInfoUseCase {
     required this.name,
   });
 
-  FamilyMemberMock execute() => houseWorkRepository.getFamilyMemberInfo(name);
+  FamilyMemberDomain execute() => houseWorkRepository.getFamilyMemberInfo(name);
 }

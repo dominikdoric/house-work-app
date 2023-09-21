@@ -6,7 +6,6 @@ import 'package:injectable/injectable.dart';
 @Injectable(as: RemoteDataSource)
 class RemoteDataSourceImpl extends RemoteDataSource {
   @override
-  FamilyMemberDTO getFamilyMemberInfo(String member) {
-    return Database().getFamilyMemberInfo(member);
-  }
+  FamilyMemberDTO getFamilyMemberInfo(String member) =>
+      fromFamilyMemberMock(Database().getFamilyMemberInfo(member));
 }

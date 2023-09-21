@@ -1,5 +1,5 @@
-import 'package:house_work_app/betaServer/entities/familyMemberMock/family_member_mock.dart';
+import 'package:house_work_app/domain/model/familyMemberDomain/family_member_domain.dart';
 
 abstract class HouseWorkRepository {
-  FamilyMemberMock getFamilyMemberInfo(String name);
+  FamilyMemberDomain getFamilyMemberInfo(String name);
 }
