@@ -16,9 +16,9 @@ import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart'
     as _i6;
 import 'package:house_work_app/data/remote/dataSource/remote_data_source_impl.dart'
     as _i7;
-import 'package:house_work_app/data/repository/onboarding_repository_impl.dart'
+import 'package:house_work_app/data/repository/house_work_repository_impl.dart'
     as _i9;
-import 'package:house_work_app/domain/repository/onboarding_repository.dart'
+import 'package:house_work_app/domain/repository/house_work_repository.dart'
     as _i8;
 import 'package:house_work_app/domain/use_case/get_family_member_info_use_case.dart'
     as _i10;
@@ -46,10 +46,10 @@ extension GetItInjectableX on _i1.GetIt {
       preResolve: true,
     );
     gh.factory<_i6.RemoteDataSource>(() => _i7.RemoteDataSourceImpl());
-    gh.factory<_i8.OnboardingRepository>(() => _i9.OnboardingRepositoryImpl(
+    gh.factory<_i8.HouseWorkRepository>(() => _i9.HouseWorkRepositoryImpl(
         remoteDataSource: gh<_i6.RemoteDataSource>()));
     gh.lazySingleton<_i10.GetFamilyInfoUseCase>(() => _i10.GetFamilyInfoUseCase(
-          onboardingRepository: gh<_i8.OnboardingRepository>(),
+          houseWorkRepository: gh<_i8.HouseWorkRepository>(),
           name: gh<String>(),
         ));
     return this;

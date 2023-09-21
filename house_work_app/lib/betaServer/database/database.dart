@@ -1,5 +1,5 @@
-import 'package:house_work_app/data/mockServer/entities/familyMember/family_member.dart';
-import 'package:house_work_app/data/mockServer/entities/familyMember/family_member_dummy_data.dart';
+import 'package:house_work_app/betaServer/entities/familyMember/family_member.dart';
+import 'package:house_work_app/betaServer/entities/familyMember/family_member_dummy_data.dart';
 
 class Database {
     FamilyMember getFamilyMemberInfo(String member) {

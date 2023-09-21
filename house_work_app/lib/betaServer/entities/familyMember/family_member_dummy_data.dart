@@ -1,6 +1,6 @@
-import 'package:house_work_app/data/mockServer/entities/chore/chore.dart';
-import 'package:house_work_app/data/mockServer/entities/chore/chore_dummy_data.dart';
-import 'package:house_work_app/data/mockServer/entities/familyMember/family_member.dart';
+import 'package:house_work_app/betaServer/entities/chore/chore.dart';
+import 'package:house_work_app/betaServer/entities/chore/chore_dummy_data.dart';
+import 'package:house_work_app/betaServer/entities/familyMember/family_member.dart';
 
 final leonardaInfo = FamilyMember(
   name: 'Leonarda',

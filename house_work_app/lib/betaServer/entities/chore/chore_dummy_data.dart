@@ -1,4 +1,4 @@
-import 'package:house_work_app/data/mockServer/entities/chore/chore.dart';
+import 'package:house_work_app/betaServer/entities/chore/chore.dart';
 
 final cleanTheKitchen = Chore(
   name: 'Clean the kitchen',
