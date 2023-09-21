@@ -1,32 +1,32 @@
-import 'package:house_work_app/betaServer/entities/chore/chore_mock.dart';
-import 'package:house_work_app/betaServer/entities/chore/chore_mock_dummy_data.dart';
-import 'package:house_work_app/betaServer/entities/familyMember/family_member_mock.dart';
+import 'package:house_work_app/betaServer/entities/choreMock/chore_mock.dart';
+import 'package:house_work_app/betaServer/entities/choreMock/chore_mock_dummy_data.dart';
+import 'package:house_work_app/betaServer/entities/familyMemberMock/family_member_mock.dart';
 
-final leonardaInfo = FamilyMember(
+final leonardaInfo = FamilyMemberMock(
   id: 1,
   name: 'Leonarda',
-  listOfChores: leonardaChoresList,
+  choresList: leonardaChoresList,
 );
 
-final dominikInfo = FamilyMember(
+final dominikInfo = FamilyMemberMock(
   id: 2,
   name: 'Dominik',
-  listOfChores: dominikChoresList,
+  choresList: dominikChoresList,
 );
 
-final jasnaInfo = FamilyMember(
+final jasnaInfo = FamilyMemberMock(
   id: 3,
   name: 'Jasna',
-  listOfChores: jasnaChoresList,
+  choresList: jasnaChoresList,
 );
 
-final drazenInfo = FamilyMember(
+final drazenInfo = FamilyMemberMock(
   id: 4,
   name: 'Dražen',
-  listOfChores: drazenChoresList,
+  choresList: drazenChoresList,
 );
 
-final List<Chore> leonardaChoresList = [
+final List<ChoreMock> leonardaChoresList = [
   cleanTheKitchen,
   takeOutTheTrash,
   sweepTheFloors,
@@ -37,7 +37,7 @@ final List<Chore> leonardaChoresList = [
   organizeTheCloset,
 ];
 
-final List<Chore> dominikChoresList = [
+final List<ChoreMock> dominikChoresList = [
   vacuumTheLivingRoom,
   takeOutTheTrash,
   washTheDishes,
@@ -48,7 +48,7 @@ final List<Chore> dominikChoresList = [
   sweepTheFloors,
 ];
 
-final List<Chore> jasnaChoresList = [
+final List<ChoreMock> jasnaChoresList = [
   cleanTheKitchen,
   takeOutTheTrash,
   sweepTheFloors,
@@ -59,7 +59,7 @@ final List<Chore> jasnaChoresList = [
   organizeTheCloset,
 ];
 
-final List<Chore> drazenChoresList = [
+final List<ChoreMock> drazenChoresList = [
   vacuumTheLivingRoom,
   takeOutTheTrash,
   washTheDishes,

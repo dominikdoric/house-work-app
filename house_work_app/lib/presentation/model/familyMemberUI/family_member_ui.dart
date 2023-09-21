@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:house_work_app/domain/model/familyMember/family_member_domain.dart';
+import 'package:house_work_app/domain/model/familyMemberDomain/family_member_domain.dart';
+import 'package:house_work_app/presentation/model/choreUI/chore_ui.dart';
 
 part 'family_member_ui.freezed.dart';
 
@@ -8,7 +9,7 @@ class FamilyMemberUI with _$FamilyMemberUI {
   const factory FamilyMemberUI({
     required int id,
     required String name,
-    required String password,
+    required List<ChoreUI> choresList,
   }) = _FamilyMemberUI;
 }
 
@@ -16,6 +17,6 @@ FamilyMemberUI fromFamilyMemberDomain(FamilyMemberDomain familyMemberDomain) {
   return FamilyMemberUI(
     id: familyMemberDomain.id,
     name: familyMemberDomain.name,
-    password: familyMemberDomain.password,
+    choresList: familyMemberDomain.choresList,
   );
 }

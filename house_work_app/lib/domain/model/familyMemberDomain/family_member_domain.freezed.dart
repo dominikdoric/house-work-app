@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$FamilyMemberDomain {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
+  List<ChoreDomain> get choresList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $FamilyMemberDomainCopyWith<FamilyMemberDomain> get copyWith =>
@@ -31,7 +31,7 @@ abstract class $FamilyMemberDomainCopyWith<$Res> {
           FamilyMemberDomain value, $Res Function(FamilyMemberDomain) then) =
       _$FamilyMemberDomainCopyWithImpl<$Res, FamilyMemberDomain>;
   @useResult
-  $Res call({int id, String name, String password});
+  $Res call({int id, String name, List<ChoreDomain> choresList});
 }
 
 /// @nodoc
@@ -49,7 +49,7 @@ class _$FamilyMemberDomainCopyWithImpl<$Res, $Val extends FamilyMemberDomain>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? password = null,
+    Object? choresList = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -60,10 +60,10 @@ class _$FamilyMemberDomainCopyWithImpl<$Res, $Val extends FamilyMemberDomain>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
+      choresList: null == choresList
+          ? _value.choresList
+          : choresList // ignore: cast_nullable_to_non_nullable
+              as List<ChoreDomain>,
     ) as $Val);
   }
 }
@@ -76,7 +76,7 @@ abstract class _$$_FamilyMemberDomainCopyWith<$Res>
       __$$_FamilyMemberDomainCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String name, String password});
+  $Res call({int id, String name, List<ChoreDomain> choresList});
 }
 
 /// @nodoc
@@ -92,7 +92,7 @@ class __$$_FamilyMemberDomainCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? password = null,
+    Object? choresList = null,
   }) {
     return _then(_$_FamilyMemberDomain(
       id: null == id
@@ -103,10 +103,10 @@ class __$$_FamilyMemberDomainCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
+      choresList: null == choresList
+          ? _value._choresList
+          : choresList // ignore: cast_nullable_to_non_nullable
+              as List<ChoreDomain>,
     ));
   }
 }
@@ -115,18 +115,26 @@ class __$$_FamilyMemberDomainCopyWithImpl<$Res>
 
 class _$_FamilyMemberDomain implements _FamilyMemberDomain {
   const _$_FamilyMemberDomain(
-      {required this.id, required this.name, required this.password});
+      {required this.id,
+      required this.name,
+      required final List<ChoreDomain> choresList})
+      : _choresList = choresList;
 
   @override
   final int id;
   @override
   final String name;
+  final List<ChoreDomain> _choresList;
   @override
-  final String password;
+  List<ChoreDomain> get choresList {
+    if (_choresList is EqualUnmodifiableListView) return _choresList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_choresList);
+  }
 
   @override
   String toString() {
-    return 'FamilyMemberDomain(id: $id, name: $name, password: $password)';
+    return 'FamilyMemberDomain(id: $id, name: $name, choresList: $choresList)';
   }
 
   @override
@@ -136,12 +144,13 @@ class _$_FamilyMemberDomain implements _FamilyMemberDomain {
             other is _$_FamilyMemberDomain &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.password, password) ||
-                other.password == password));
+            const DeepCollectionEquality()
+                .equals(other._choresList, _choresList));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, password);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, const DeepCollectionEquality().hash(_choresList));
 
   @JsonKey(ignore: true)
   @override
@@ -155,14 +164,14 @@ abstract class _FamilyMemberDomain implements FamilyMemberDomain {
   const factory _FamilyMemberDomain(
       {required final int id,
       required final String name,
-      required final String password}) = _$_FamilyMemberDomain;
+      required final List<ChoreDomain> choresList}) = _$_FamilyMemberDomain;
 
   @override
   int get id;
   @override
   String get name;
   @override
-  String get password;
+  List<ChoreDomain> get choresList;
   @override
   @JsonKey(ignore: true)
   _$$_FamilyMemberDomainCopyWith<_$_FamilyMemberDomain> get copyWith =>

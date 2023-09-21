@@ -1,4 +1,4 @@
-import 'package:house_work_app/betaServer/entities/familyMember/family_member_mock.dart';
+import 'package:house_work_app/betaServer/entities/familyMemberMock/family_member_mock.dart';
 import 'package:house_work_app/data/remote/dataSource/remote_data_source.dart';
 import 'package:house_work_app/domain/repository/house_work_repository.dart';
 import 'package:injectable/injectable.dart';
@@ -10,6 +10,6 @@ class HouseWorkRepositoryImpl extends HouseWorkRepository {
   HouseWorkRepositoryImpl({required this.remoteDataSource});
 
   @override
-  FamilyMember getFamilyMemberInfo(String name) =>
+  FamilyMemberMock getFamilyMemberInfo(String name) =>
       remoteDataSource.getFamilyMemberInfo(name);
 }

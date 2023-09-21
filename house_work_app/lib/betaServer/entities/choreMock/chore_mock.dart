@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class Chore {
+class ChoreMock {
   final int id;
   final String name;
   final String description;
@@ -8,7 +8,7 @@ class Chore {
   final String beDoneBy;
   final String status;
 
-  Chore({
+  ChoreMock({
     required this.id,
     required this.name,
     required this.description,

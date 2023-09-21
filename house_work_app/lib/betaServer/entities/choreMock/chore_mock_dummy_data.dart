@@ -1,6 +1,6 @@
-import 'package:house_work_app/betaServer/entities/chore/chore_mock.dart';
+import 'package:house_work_app/betaServer/entities/choreMock/chore_mock.dart';
 
-final cleanTheKitchen = Chore(
+final cleanTheKitchen = ChoreMock(
   id: 1,
   name: 'Clean the kitchen',
   description: 'Cleaning the kitchen',
@@ -9,7 +9,7 @@ final cleanTheKitchen = Chore(
   status: 'In progress',
 );
 
-final vacuumTheLivingRoom = Chore(
+final vacuumTheLivingRoom = ChoreMock(
   id: 2,
   name: 'Vacuum the living room',
   description: 'Vacuum the living room',
@@ -18,7 +18,7 @@ final vacuumTheLivingRoom = Chore(
   status: 'In progress',
 );
 
-final takeOutTheTrash = Chore(
+final takeOutTheTrash = ChoreMock(
   id: 3,
   name: 'Take out the trash',
   description: 'Take out the trash',
@@ -27,7 +27,7 @@ final takeOutTheTrash = Chore(
   status: 'In progress',
 );
 
-final washTheDishes = Chore(
+final washTheDishes = ChoreMock(
   id: 4,
   name: 'Wash the dishes',
   description: 'Wash the dishes',
@@ -36,7 +36,7 @@ final washTheDishes = Chore(
   status: 'In progress',
 );
 
-final sweepTheFloors = Chore(
+final sweepTheFloors = ChoreMock(
   id: 5,
   name: 'Sweep the floors',
   description: 'Sweep the floors',
@@ -45,7 +45,7 @@ final sweepTheFloors = Chore(
   status: 'In progress',
 );
 
-final foldLaundry = Chore(
+final foldLaundry = ChoreMock(
   id: 6,
   name: 'Fold laundry',
   description: 'Fold laundry',
@@ -54,7 +54,7 @@ final foldLaundry = Chore(
   status: 'In progress',
 );
 
-final mowTheLawn = Chore(
+final mowTheLawn = ChoreMock(
   id: 7,
   name: 'Mow the lawn',
   description: 'Mow the lawn',
@@ -63,7 +63,7 @@ final mowTheLawn = Chore(
   status: 'In progress',
 );
 
-final waterThePlants = Chore(
+final waterThePlants = ChoreMock(
   id: 8,
   name: 'Water the plants',
   description: 'Water the plants',
@@ -72,7 +72,7 @@ final waterThePlants = Chore(
   status: 'In progress',
 );
 
-final dustTheShelves = Chore(
+final dustTheShelves = ChoreMock(
   id: 9,
   name: 'Dust the shelves',
   description: 'Dust the shelves',
@@ -81,7 +81,7 @@ final dustTheShelves = Chore(
   status: 'In progress',
 );
 
-final cleanRoom = Chore(
+final cleanRoom = ChoreMock(
   id: 10,
   name: 'Clean the room',
   description: 'Cleaning the room',
@@ -90,7 +90,7 @@ final cleanRoom = Chore(
   status: 'In progress',
 );
 
-final organizeTheCloset = Chore(
+final organizeTheCloset = ChoreMock(
   id: 11,
   name: 'Organize the closet',
   description: 'Organize the closet',
@@ -99,7 +99,7 @@ final organizeTheCloset = Chore(
   status: 'In progress',
 );
 
-final cleanTheBathroom = Chore(
+final cleanTheBathroom = ChoreMock(
   id: 12,
   name: 'Clean the bathroom',
   description: 'Cleaning the bathroom',
@@ -108,7 +108,7 @@ final cleanTheBathroom = Chore(
   status: 'In progress',
 );
 
-final cookDinner = Chore(
+final cookDinner = ChoreMock(
   id: 13,
   name: 'Cook dinner',
   description: 'Cook dinner',
@@ -117,7 +117,7 @@ final cookDinner = Chore(
   status: 'In progress',
 );
 
-final organizeTheLivingRoom = Chore(
+final organizeTheLivingRoom = ChoreMock(
   id: 14,
   name: 'Organize the living room',
   description: 'Organize the living room',

@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$FamilyMemberUI {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
+  List<ChoreUI> get choresList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $FamilyMemberUICopyWith<FamilyMemberUI> get copyWith =>
@@ -31,7 +31,7 @@ abstract class $FamilyMemberUICopyWith<$Res> {
           FamilyMemberUI value, $Res Function(FamilyMemberUI) then) =
       _$FamilyMemberUICopyWithImpl<$Res, FamilyMemberUI>;
   @useResult
-  $Res call({int id, String name, String password});
+  $Res call({int id, String name, List<ChoreUI> choresList});
 }
 
 /// @nodoc
@@ -49,7 +49,7 @@ class _$FamilyMemberUICopyWithImpl<$Res, $Val extends FamilyMemberUI>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? password = null,
+    Object? choresList = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -60,10 +60,10 @@ class _$FamilyMemberUICopyWithImpl<$Res, $Val extends FamilyMemberUI>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
+      choresList: null == choresList
+          ? _value.choresList
+          : choresList // ignore: cast_nullable_to_non_nullable
+              as List<ChoreUI>,
     ) as $Val);
   }
 }
@@ -76,7 +76,7 @@ abstract class _$$_FamilyMemberUICopyWith<$Res>
       __$$_FamilyMemberUICopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String name, String password});
+  $Res call({int id, String name, List<ChoreUI> choresList});
 }
 
 /// @nodoc
@@ -92,7 +92,7 @@ class __$$_FamilyMemberUICopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? password = null,
+    Object? choresList = null,
   }) {
     return _then(_$_FamilyMemberUI(
       id: null == id
@@ -103,10 +103,10 @@ class __$$_FamilyMemberUICopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
+      choresList: null == choresList
+          ? _value._choresList
+          : choresList // ignore: cast_nullable_to_non_nullable
+              as List<ChoreUI>,
     ));
   }
 }
@@ -115,18 +115,26 @@ class __$$_FamilyMemberUICopyWithImpl<$Res>
 
 class _$_FamilyMemberUI implements _FamilyMemberUI {
   const _$_FamilyMemberUI(
-      {required this.id, required this.name, required this.password});
+      {required this.id,
+      required this.name,
+      required final List<ChoreUI> choresList})
+      : _choresList = choresList;
 
   @override
   final int id;
   @override
   final String name;
+  final List<ChoreUI> _choresList;
   @override
-  final String password;
+  List<ChoreUI> get choresList {
+    if (_choresList is EqualUnmodifiableListView) return _choresList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_choresList);
+  }
 
   @override
   String toString() {
-    return 'FamilyMemberUI(id: $id, name: $name, password: $password)';
+    return 'FamilyMemberUI(id: $id, name: $name, choresList: $choresList)';
   }
 
   @override
@@ -136,12 +144,13 @@ class _$_FamilyMemberUI implements _FamilyMemberUI {
             other is _$_FamilyMemberUI &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.password, password) ||
-                other.password == password));
+            const DeepCollectionEquality()
+                .equals(other._choresList, _choresList));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, password);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, const DeepCollectionEquality().hash(_choresList));
 
   @JsonKey(ignore: true)
   @override
@@ -154,14 +163,14 @@ abstract class _FamilyMemberUI implements FamilyMemberUI {
   const factory _FamilyMemberUI(
       {required final int id,
       required final String name,
-      required final String password}) = _$_FamilyMemberUI;
+      required final List<ChoreUI> choresList}) = _$_FamilyMemberUI;
 
   @override
   int get id;
   @override
   String get name;
   @override
-  String get password;
+  List<ChoreUI> get choresList;
   @override
   @JsonKey(ignore: true)
   _$$_FamilyMemberUICopyWith<_$_FamilyMemberUI> get copyWith =>

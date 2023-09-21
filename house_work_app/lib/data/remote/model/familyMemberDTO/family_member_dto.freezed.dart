@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$FamilyMemberDTO {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get password => throw _privateConstructorUsedError;
+  List<ChoreDTO> get choresList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $FamilyMemberDTOCopyWith<FamilyMemberDTO> get copyWith =>
@@ -31,7 +31,7 @@ abstract class $FamilyMemberDTOCopyWith<$Res> {
           FamilyMemberDTO value, $Res Function(FamilyMemberDTO) then) =
       _$FamilyMemberDTOCopyWithImpl<$Res, FamilyMemberDTO>;
   @useResult
-  $Res call({int id, String name, String password});
+  $Res call({int id, String name, List<ChoreDTO> choresList});
 }
 
 /// @nodoc
@@ -49,7 +49,7 @@ class _$FamilyMemberDTOCopyWithImpl<$Res, $Val extends FamilyMemberDTO>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? password = null,
+    Object? choresList = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -60,10 +60,10 @@ class _$FamilyMemberDTOCopyWithImpl<$Res, $Val extends FamilyMemberDTO>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
+      choresList: null == choresList
+          ? _value.choresList
+          : choresList // ignore: cast_nullable_to_non_nullable
+              as List<ChoreDTO>,
     ) as $Val);
   }
 }
@@ -76,7 +76,7 @@ abstract class _$$_FamilyMemberDTOCopyWith<$Res>
       __$$_FamilyMemberDTOCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String name, String password});
+  $Res call({int id, String name, List<ChoreDTO> choresList});
 }
 
 /// @nodoc
@@ -92,7 +92,7 @@ class __$$_FamilyMemberDTOCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? password = null,
+    Object? choresList = null,
   }) {
     return _then(_$_FamilyMemberDTO(
       id: null == id
@@ -103,10 +103,10 @@ class __$$_FamilyMemberDTOCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      password: null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
+      choresList: null == choresList
+          ? _value._choresList
+          : choresList // ignore: cast_nullable_to_non_nullable
+              as List<ChoreDTO>,
     ));
   }
 }
@@ -115,18 +115,26 @@ class __$$_FamilyMemberDTOCopyWithImpl<$Res>
 
 class _$_FamilyMemberDTO implements _FamilyMemberDTO {
   const _$_FamilyMemberDTO(
-      {required this.id, required this.name, required this.password});
+      {required this.id,
+      required this.name,
+      required final List<ChoreDTO> choresList})
+      : _choresList = choresList;
 
   @override
   final int id;
   @override
   final String name;
+  final List<ChoreDTO> _choresList;
   @override
-  final String password;
+  List<ChoreDTO> get choresList {
+    if (_choresList is EqualUnmodifiableListView) return _choresList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_choresList);
+  }
 
   @override
   String toString() {
-    return 'FamilyMemberDTO(id: $id, name: $name, password: $password)';
+    return 'FamilyMemberDTO(id: $id, name: $name, choresList: $choresList)';
   }
 
   @override
@@ -136,12 +144,13 @@ class _$_FamilyMemberDTO implements _FamilyMemberDTO {
             other is _$_FamilyMemberDTO &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.password, password) ||
-                other.password == password));
+            const DeepCollectionEquality()
+                .equals(other._choresList, _choresList));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, password);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, const DeepCollectionEquality().hash(_choresList));
 
   @JsonKey(ignore: true)
   @override
@@ -154,14 +163,14 @@ abstract class _FamilyMemberDTO implements FamilyMemberDTO {
   const factory _FamilyMemberDTO(
       {required final int id,
       required final String name,
-      required final String password}) = _$_FamilyMemberDTO;
+      required final List<ChoreDTO> choresList}) = _$_FamilyMemberDTO;
 
   @override
   int get id;
   @override
   String get name;
   @override
-  String get password;
+  List<ChoreDTO> get choresList;
   @override
   @JsonKey(ignore: true)
   _$$_FamilyMemberDTOCopyWith<_$_FamilyMemberDTO> get copyWith =>
