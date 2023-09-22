@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:house_work_app/data/remote/model/choreDTO/chore_dto.dart';
 import 'package:house_work_app/data/remote/model/familyMemberDTO/family_member_dto.dart';
 import 'package:house_work_app/domain/model/choreDomain/chore_domain.dart';
 
@@ -14,9 +15,17 @@ class FamilyMemberDomain with _$FamilyMemberDomain {
 }
 
 FamilyMemberDomain fromFamilyMemberDto(FamilyMemberDTO familyMemberDTO) {
+  final List<ChoreDTO> choresListDTO = familyMemberDTO.choresList;
+  final List<ChoreDomain> choresListDomain = choresListDTO
+      .map((choreDTO) {
+        fromChoreDTO(choreDTO);
+      })
+      .cast<ChoreDomain>()
+      .toList();
+
   return FamilyMemberDomain(
     id: familyMemberDTO.id,
     name: familyMemberDTO.name,
-    choresList: familyMemberDTO.choresList,
+    choresList: choresListDomain,
   );
 }

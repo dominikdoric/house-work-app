@@ -1,6 +1,9 @@
 part of 'home_bloc.dart';
 
-@immutable
-abstract class HomeState {}
-
-class HomeInitial extends HomeState {}
+@freezed
+class HomeState with _$HomeState {
+  factory HomeState({
+    FamilyMemberUI? familyMemberUI,
+    @Default('') String error,
+  }) = _HomeLoadedState;
+}

@@ -9,7 +9,7 @@ class HeaderMemberSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     return ColoredBox(
       color: Colors.indigo.shade100,
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           MemberPlaceholder(name: Strings.leonarda),

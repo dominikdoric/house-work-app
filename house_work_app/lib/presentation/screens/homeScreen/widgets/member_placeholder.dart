@@ -1,23 +1,38 @@
 import 'package:flutter/material.dart';
 
-class MemberPlaceholder extends StatelessWidget {
+class MemberPlaceholder extends StatefulWidget {
   final String name;
+  bool isSelected;
 
-  const MemberPlaceholder({required this.name});
+  MemberPlaceholder({
+    required this.name,
+    this.isSelected = false,
+  });
 
+  @override
+  State<MemberPlaceholder> createState() => _MemberPlaceholderState();
+}
+
+class _MemberPlaceholderState extends State<MemberPlaceholder> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        setState(() {
+          widget.isSelected = !widget.isSelected;
+        });
+      },
       child: Column(
         children: [
           Center(
             child: Card(
-              color: Colors.indigo.shade50,
+              color: widget.isSelected
+                  ? Colors.indigo.shade200
+                  : Colors.indigo.shade50,
               elevation: 5,
               child: Padding(
                 padding: const EdgeInsets.all(14.0),
-                child: Text(name),
+                child: Text(widget.name),
               ),
             ),
           ),

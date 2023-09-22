@@ -4,13 +4,10 @@ import 'package:injectable/injectable.dart';
 
 @lazySingleton
 class GetFamilyInfoUseCase {
-  final String name;
   final HouseWorkRepository houseWorkRepository;
 
-  GetFamilyInfoUseCase({
-    required this.houseWorkRepository,
-    required this.name,
-  });
+  GetFamilyInfoUseCase({required this.houseWorkRepository});
 
-  FamilyMemberDomain execute() => houseWorkRepository.getFamilyMemberInfo(name);
+  FamilyMemberDomain execute(String name) =>
+      houseWorkRepository.getFamilyMemberInfo(name);
 }
