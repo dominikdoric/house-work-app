@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/onboardingDoneScreen/onboarding_done_screen.dart';
 import 'package:house_work_app/presentation/widgets/custom_text.dart';
+import 'package:house_work_app/presentation/widgets/custom_text_field.dart';
 import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class FamilyDescriptionScreenView extends StatelessWidget {
-  const FamilyDescriptionScreenView({super.key});
+  FamilyDescriptionScreenView({super.key});
+
+  final TextEditingController _textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,166 +28,48 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 ),
               ),
               const CustomText(text: 'First'),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.firstFamilyMemberName,
-                    hintText: Strings.firstFamilyMemberName,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.paddingMedium),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.firstFamilyMemberName,
+                hintText: Strings.firstFamilyMemberName,
               ),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.firstFamilyMemberPassword,
-                    hintText: Strings.firstFamilyMemberPassword,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.paddingMedium),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.firstFamilyMemberPassword,
+                hintText: Strings.firstFamilyMemberPassword,
               ),
               const CustomText(text: 'Second'),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.secondFamilyMemberName,
-                    hintText: Strings.secondFamilyMemberName,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.paddingMedium),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.secondFamilyMemberName,
+                hintText: Strings.secondFamilyMemberName,
               ),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.secondFamilyMemberPassword,
-                    hintText: Strings.secondFamilyMemberPassword,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.paddingMedium),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.secondFamilyMemberPassword,
+                hintText: Strings.secondFamilyMemberPassword,
               ),
               const CustomText(text: 'Third'),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.thirdFamilyMemberName,
-                    hintText: Strings.thirdFamilyMemberName,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.thirdFamilyMemberName,
+                hintText: Strings.thirdFamilyMemberName,
               ),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.thirdFamilyMemberPassword,
-                    hintText: Strings.thirdFamilyMemberPassword,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.paddingMedium),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.thirdFamilyMemberPassword,
+                hintText: Strings.thirdFamilyMemberPassword,
               ),
               const CustomText(text: 'Fourth'),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.fourthFamilyMemberName,
-                    hintText: Strings.fourthFamilyMemberName,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.paddingMedium),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.fourthFamilyMemberName,
+                hintText: Strings.fourthFamilyMemberName,
               ),
-              Padding(
-                padding: const EdgeInsets.all(Dimensions.paddingSmall),
-                child: TextField(
-                  decoration: InputDecoration(
-                    labelText: Strings.fourthFamilyMemberPassword,
-                    hintText: Strings.fourthFamilyMemberPassword,
-                    prefixIcon: const Icon(Icons.person),
-                    suffixIcon: IconButton(
-                      icon: const Icon(Icons.clear),
-                      onPressed: () {},
-                    ),
-                    border: const OutlineInputBorder(
-                      gapPadding: Dimensions.paddingMedium,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.paddingMedium),
-                      ),
-                    ),
-                  ),
-                ),
+              CustomTextField(
+                textEditingController: _textEditingController,
+                labelText: Strings.fourthFamilyMemberPassword,
+                hintText: Strings.fourthFamilyMemberPassword,
               ),
               OutlinedButton(
                 child: const CustomText(text: Strings.submit),

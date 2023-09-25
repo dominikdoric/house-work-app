@@ -6,6 +6,6 @@ class FamilyDescriptionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: FamilyDescriptionScreenView());
+    return Scaffold(body: FamilyDescriptionScreenView());
   }
 }

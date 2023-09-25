@@ -30,6 +30,7 @@ class Strings {
   static const finishedFamilyInfoSetup =
       'You finished setting up your family information. '
       'Now its turn to start with chores!';
+  static const save = 'Save';
   static const submit = 'Submit';
   static const finish = 'Finish';
 

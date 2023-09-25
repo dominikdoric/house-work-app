@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/familyDescriptionScreen/family_description_screen.dart';
 import 'package:house_work_app/presentation/widgets/custom_text.dart';
+import 'package:house_work_app/presentation/widgets/custom_text_field.dart';
 import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class FamilyCountScreenView extends StatelessWidget {
-  FamilyCountScreenView({super.key});
-
   final TextEditingController _textEditingController = TextEditingController();
+
+  FamilyCountScreenView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,28 +20,10 @@ class FamilyCountScreenView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const CustomText(text: Strings.familyMembersNumber),
-            Padding(
-              padding: const EdgeInsets.all(Dimensions.paddingSmall),
-              child: TextField(
-                controller: _textEditingController,
-                decoration: InputDecoration(
-                  labelText: Strings.familyMembersCount,
-                  hintText: Strings.familyMembersCount,
-                  prefixIcon: const Icon(Icons.person),
-                  suffixIcon: IconButton(
-                    icon: const Icon(Icons.clear),
-                    onPressed: () {
-                      _textEditingController.clear();
-                    },
-                  ),
-                  border: const OutlineInputBorder(
-                    gapPadding: Dimensions.paddingMedium,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(Dimensions.paddingMedium),
-                    ),
-                  ),
-                ),
-              ),
+            CustomTextField(
+              textEditingController: _textEditingController,
+              labelText: Strings.familyMembersCount,
+              hintText: Strings.familyMembersCount,
             ),
             OutlinedButton(
               child: const CustomText(text: Strings.submit),
