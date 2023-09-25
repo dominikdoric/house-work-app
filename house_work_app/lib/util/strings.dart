@@ -39,8 +39,10 @@ class Strings {
   static const jasna = 'Jasna';
   static const drazen = 'Dražen';
 
-  // Board chore status
+  // Chore
+  static const createChore = 'Create new chore here!';
   static const toDo = 'To do';
   static const inProgress = 'In progress';
   static const done = 'Done';
+  static const addChore = 'Enter new chore here';
 }

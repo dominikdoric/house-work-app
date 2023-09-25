@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/familyDescriptionScreen/family_description_screen.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
@@ -17,10 +18,7 @@ class FamilyCountScreenView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              Strings.familyMembersNumber,
-              style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-            ),
+            const CustomText(text: Strings.familyMembersNumber),
             Padding(
               padding: const EdgeInsets.all(Dimensions.paddingSmall),
               child: TextField(
@@ -45,10 +43,7 @@ class FamilyCountScreenView extends StatelessWidget {
               ),
             ),
             OutlinedButton(
-              child: const Text(
-                Strings.submit,
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-              ),
+              child: const CustomText(text: Strings.submit),
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(

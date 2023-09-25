@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/onboardingDoneScreen/onboarding_done_screen.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
@@ -23,10 +24,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                   style: TextStyle(fontSize: Dimensions.fontSizeMedium),
                 ),
               ),
-              const Text(
-                'First',
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-              ),
+              const CustomText(text: 'First'),
               Padding(
                 padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
@@ -67,10 +65,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                   ),
                 ),
               ),
-              const Text(
-                'Second',
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-              ),
+              const CustomText(text: 'Second'),
               Padding(
                 padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
@@ -111,10 +106,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                   ),
                 ),
               ),
-              const Text(
-                'Third',
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-              ),
+              const CustomText(text: 'Third'),
               Padding(
                 padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
@@ -153,10 +145,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                   ),
                 ),
               ),
-              const Text(
-                'Fourth',
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-              ),
+              const CustomText(text: 'Fourth'),
               Padding(
                 padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: TextField(
@@ -198,10 +187,7 @@ class FamilyDescriptionScreenView extends StatelessWidget {
                 ),
               ),
               OutlinedButton(
-                child: const Text(
-                  Strings.submit,
-                  style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-                ),
+                child: const CustomText(text: Strings.submit),
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(

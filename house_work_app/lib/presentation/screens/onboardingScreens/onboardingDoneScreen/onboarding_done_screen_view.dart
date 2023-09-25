@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/homeScreen/home_screen.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
@@ -15,25 +16,16 @@ class OnboardingDoneScreenView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              Strings.congratulations,
-              style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-            ),
+            const CustomText(text: Strings.congratulations),
             const Padding(
               padding: EdgeInsets.only(
                 top: Dimensions.paddingMedium,
                 bottom: Dimensions.paddingMedium,
               ),
-              child: Text(
-                Strings.finishedFamilyInfoSetup,
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-              ),
+              child: CustomText(text: Strings.finishedFamilyInfoSetup),
             ),
             OutlinedButton(
-              child: const Text(
-                Strings.finish,
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-              ),
+              child: const CustomText(text: Strings.finish),
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(

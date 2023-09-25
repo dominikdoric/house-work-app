@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/homeScreen/widgets/chore_card.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
 
 class StatusCell extends StatelessWidget {
@@ -21,12 +22,7 @@ class StatusCell extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: Dimensions.paddingSmall),
-              child: Text(
-                statusName,
-                style: const TextStyle(
-                  fontSize: Dimensions.fontSizeMedium,
-                ),
-              ),
+              child: CustomText(text: statusName),
             ),
             const Divider(thickness: 2.0),
             for (final String chore in choresDescriptions)

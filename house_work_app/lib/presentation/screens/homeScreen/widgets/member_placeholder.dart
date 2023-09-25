@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 
 class MemberPlaceholder extends StatefulWidget {
   final String name;
@@ -32,7 +33,7 @@ class _MemberPlaceholderState extends State<MemberPlaceholder> {
               elevation: 5,
               child: Padding(
                 padding: const EdgeInsets.all(14.0),
-                child: Text(widget.name),
+                child: CustomText(text: widget.name),
               ),
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/onboardingScreens/familyCountScreen/family_count_screen.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
 import 'package:house_work_app/util/strings.dart';
 
@@ -17,10 +18,7 @@ class FamilyNameScreenView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              Strings.enterFamilyName,
-              style: TextStyle(fontSize: Dimensions.fontSizeMedium),
-            ),
+            const CustomText(text: Strings.enterFamilyName),
             Padding(
               padding: const EdgeInsets.all(Dimensions.paddingMedium),
               child: TextField(

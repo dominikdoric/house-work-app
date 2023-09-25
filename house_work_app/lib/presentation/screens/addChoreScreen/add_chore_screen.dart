@@ -12,7 +12,7 @@ class AddChoreScreen extends StatelessWidget {
         title: const Text(Strings.addChoreScreen),
         backgroundColor: Colors.lightBlue.shade50,
       ),
-      body: const AddChoreScreenView(),
+      body: AddChoreScreenView(),
     );
   }
 }

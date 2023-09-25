@@ -1,19 +1,93 @@
 import 'package:flutter/material.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
+import 'package:house_work_app/util/strings.dart';
 
 class AddChoreScreenView extends StatelessWidget {
-  const AddChoreScreenView({super.key});
+  final TextEditingController _textEditingController = TextEditingController();
+
+  AddChoreScreenView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(Dimensions.paddingMedium),
+    return Padding(
+      padding: const EdgeInsets.all(Dimensions.paddingMedium),
       child: Column(
         children: [
-          Center(
-            child: Text(
-              'Create new chore here!',
-              style: TextStyle(fontSize: Dimensions.fontSizeLarge),
+          const Center(
+            child: CustomText(text: Strings.createChore),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(Dimensions.paddingMedium),
+            child: TextField(
+              controller: _textEditingController,
+              decoration: InputDecoration(
+                labelText: Strings.addChore,
+                hintText: Strings.addChore,
+                prefixIcon: const Icon(Icons.person),
+                suffixIcon: IconButton(
+                  icon: const Icon(Icons.clear),
+                  // Clear text when clear icon is clicked
+                  onPressed: () {
+                    _textEditingController.clear();
+                  },
+                ),
+                border: const OutlineInputBorder(
+                  gapPadding: Dimensions.paddingMedium,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(Dimensions.paddingMedium),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(Dimensions.paddingMedium),
+            child: TextField(
+              controller: _textEditingController,
+              decoration: InputDecoration(
+                labelText: Strings.addChore,
+                hintText: Strings.addChore,
+                prefixIcon: const Icon(Icons.person),
+                suffixIcon: IconButton(
+                  icon: const Icon(Icons.clear),
+                  // Clear text when clear icon is clicked
+                  onPressed: () {
+                    _textEditingController.clear();
+                  },
+                ),
+                border: const OutlineInputBorder(
+                  gapPadding: Dimensions.paddingMedium,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(Dimensions.paddingMedium),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const CustomText(text: 'Enter the assignee'),
+          Padding(
+            padding: const EdgeInsets.all(Dimensions.paddingMedium),
+            child: TextField(
+              controller: _textEditingController,
+              decoration: InputDecoration(
+                labelText: Strings.addChore,
+                hintText: Strings.addChore,
+                prefixIcon: const Icon(Icons.person),
+                suffixIcon: IconButton(
+                  icon: const Icon(Icons.clear),
+                  // Clear text when clear icon is clicked
+                  onPressed: () {
+                    _textEditingController.clear();
+                  },
+                ),
+                border: const OutlineInputBorder(
+                  gapPadding: Dimensions.paddingMedium,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(Dimensions.paddingMedium),
+                  ),
+                ),
+              ),
             ),
           ),
         ],

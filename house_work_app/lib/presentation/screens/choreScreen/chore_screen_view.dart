@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class ChoreScreenView extends StatelessWidget {
@@ -9,7 +10,7 @@ class ChoreScreenView extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.all(16.0),
       child: Center(
-        child: Text(Strings.choreScreenDescription),
+        child: CustomText(text: Strings.choreScreenDescription),
       ),
     );
   }
