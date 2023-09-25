@@ -41,6 +41,10 @@ class Strings {
 
   // Chore
   static const createChore = 'Create new chore here!';
+  static const enterChoreDescription = 'Enter chore description';
+  static const choreToBeDoneBy = 'Chore to be done by';
+  static const enterTheAssignee = 'Enter the assignee';
+  static const enterChoreStatus = 'Enter chore status';
   static const toDo = 'To do';
   static const inProgress = 'In progress';
   static const done = 'Done';
