@@ -6,4 +6,5 @@ class Dimensions {
 
   // Font
   static const fontSizeMedium = 20.0;
+  static const fontSizeLarge = 24.0;
 }
