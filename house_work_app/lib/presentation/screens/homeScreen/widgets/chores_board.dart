@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:house_work_app/betaServer/entities/choreMock/chore_mock.dart';
+import 'package:house_work_app/betaServer/entities/choreMock/chore_mock_dummy_data.dart';
 import 'package:house_work_app/presentation/screens/homeScreen/widgets/status_cell.dart';
 import 'package:house_work_app/util/strings.dart';
 
 class ChoresBoard extends StatelessWidget {
   ChoresBoard({super.key});
 
-  List<String> toDoList = [
-    'Clean the kitchen',
-    'Vacuum the living room',
-    'Take out the trash',
-    'Wash the dishes',
-    'Sweep the floors',
-    'Fold laundry',
+  List<ChoreMock> todoList = [
+    cleanTheKitchen,
+    vacuumTheLivingRoom,
+    takeOutTheTrash,
+    washTheDishes,
+    sweepTheFloors,
+    foldLaundry,
   ];
 
-  List<String> inProgressList = [
-    'Mow the lawn',
-    'Water the plants',
-    'Dust the shelves',
+  List<ChoreMock> inProgressList = [
+    mowTheLawn,
+    waterThePlants,
+    dustTheShelves,
   ];
 
-  List<String> doneList = [
-    'Fold laundry',
-    'Organize the closet',
-    'Clean the bathroom',
-    'Cook dinner',
-    'Organize the closet',
+  List<ChoreMock> doneList = [
+    foldLaundry,
+    organizeTheCloset,
+    cleanTheBathroom,
+    cookDinner,
+    organizeTheCloset,
   ];
 
   @override
@@ -37,15 +39,15 @@ class ChoresBoard extends StatelessWidget {
         children: [
           StatusCell(
             statusName: Strings.toDo,
-            choresDescriptions: toDoList,
+            choresList: todoList,
           ),
           StatusCell(
             statusName: Strings.inProgress,
-            choresDescriptions: inProgressList,
+            choresList: inProgressList,
           ),
           StatusCell(
             statusName: Strings.done,
-            choresDescriptions: doneList,
+            choresList: doneList,
           ),
         ],
       ),

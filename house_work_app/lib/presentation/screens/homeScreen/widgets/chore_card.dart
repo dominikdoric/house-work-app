@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:house_work_app/betaServer/entities/choreMock/chore_mock.dart';
 import 'package:house_work_app/presentation/screens/choreDetailsScreen/chore_details_screen.dart';
 
 class ChoreCard extends StatelessWidget {
-  final String choreDescription;
+  final ChoreMock choreDetails;
 
-  const ChoreCard({required this.choreDescription});
+  const ChoreCard({required this.choreDetails});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class ChoreCard extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => ChoreDetailsScreen(
-              choreDescription: choreDescription,
+              choreDetails: choreDetails,
             ),
           ),
         );
@@ -23,7 +24,7 @@ class ChoreCard extends StatelessWidget {
         elevation: 5,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Center(child: Text(choreDescription)),
+          child: Center(child: Text(choreDetails.name)),
         ),
       ),
     );
