@@ -53,10 +53,10 @@ class Strings {
   static const addChore = 'Enter new chore here';
 
   // Chore details properties
-  static const name = 'Name: ';
-  static const description = 'Description: ';
-  static const priority = 'Priority';
-  static const createdAt = 'Created at: ';
-  static const beDoneBy = 'Be done by: ';
-  static const status = 'Status: ';
+  static const name = 'Name:';
+  static const description = 'Description:';
+  static const priority = 'Priority:';
+  static const createdAt = 'Created at:';
+  static const beDoneBy = 'Be done by:';
+  static const status = 'Status:';
 }

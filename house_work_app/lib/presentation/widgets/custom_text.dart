@@ -5,11 +5,13 @@ class CustomText extends StatelessWidget {
   final String text;
   final double fontSize;
   final double paddingSize;
+  final FontWeight fontWeight;
 
   const CustomText({
     required this.text,
     this.fontSize = Dimensions.fontSizeMedium,
     this.paddingSize = Dimensions.paddingSmall,
+    this.fontWeight = FontWeight.normal,
   });
 
   @override
@@ -18,7 +20,7 @@ class CustomText extends StatelessWidget {
       padding: EdgeInsets.all(paddingSize),
       child: Text(
         text,
-        style: TextStyle(fontSize: fontSize),
+        style: TextStyle(fontSize: fontSize, fontWeight: fontWeight),
       ),
     );
   }

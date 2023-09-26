@@ -19,26 +19,32 @@ class ChoreDetailsScreenView extends StatelessWidget {
               label: Strings.name,
               value: choreDetails.name,
             ),
-            ChoreDetailsSingleRow(
-              label: Strings.description,
-              value: choreDetails.description,
-            ),
+            const Divider(),
             ChoreDetailsSingleRow(
               label: Strings.priority,
               value: choreDetails.priority,
             ),
+            const Divider(),
             ChoreDetailsSingleRow(
               label: Strings.createdAt,
               value: choreDetails.createdAt,
             ),
+            const Divider(),
             ChoreDetailsSingleRow(
               label: Strings.beDoneBy,
               value: choreDetails.beDoneBy,
             ),
+            const Divider(),
             ChoreDetailsSingleRow(
               label: Strings.status,
               value: choreDetails.status,
             ),
+            const Divider(),
+            ChoreDetailsSingleRow(
+              label: Strings.description,
+              value: choreDetails.description,
+            ),
+            const Divider(),
           ],
         ),
       ),

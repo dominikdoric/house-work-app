@@ -14,7 +14,7 @@ class ChoreDetailsSingleRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CustomText(text: label),
+        CustomText(text: label, fontWeight: FontWeight.bold),
         CustomText(text: value),
       ],
     );
