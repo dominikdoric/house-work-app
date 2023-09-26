@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:house_work_app/presentation/screens/choreScreen/chore_screen.dart';
+import 'package:house_work_app/presentation/screens/choreDetailsScreen/chore_details_screen.dart';
+import 'package:house_work_app/presentation/screens/homeScreen/home_screen.dart';
 import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/presentation/widgets/custom_text_field.dart';
 import 'package:house_work_app/util/dimensions.dart';
@@ -57,7 +58,7 @@ class AddChoreScreenView extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const ChoreScreen(),
+                      builder: (context) => const HomeScreen(),
                     ),
                   );
                 },

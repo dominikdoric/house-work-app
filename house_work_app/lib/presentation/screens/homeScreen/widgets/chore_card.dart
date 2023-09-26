@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:house_work_app/presentation/screens/choreScreen/chore_screen.dart';
+import 'package:house_work_app/presentation/screens/choreDetailsScreen/chore_details_screen.dart';
 
 class ChoreCard extends StatelessWidget {
   final String choreDescription;
@@ -11,7 +11,11 @@ class ChoreCard extends StatelessWidget {
     return InkWell(
       onTap: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => const ChoreScreen()),
+          MaterialPageRoute(
+            builder: (context) => ChoreDetailsScreen(
+              choreDescription: choreDescription,
+            ),
+          ),
         );
       },
       child: Card(
