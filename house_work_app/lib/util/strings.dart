@@ -50,4 +50,11 @@ class Strings {
   static const inProgress = 'In progress';
   static const done = 'Done';
   static const addChore = 'Enter new chore here';
+
+  // Chore details properties
+  static const name = 'Name: ';
+  static const description = 'Description: ';
+  static const createdAt = 'Created at: ';
+  static const beDoneBy = 'Be done by: ';
+  static const status = 'Status: ';
 }
