@@ -24,6 +24,10 @@ class ChoreDetailsScreenView extends StatelessWidget {
               value: choreDetails.description,
             ),
             ChoreDetailsSingleRow(
+              label: Strings.priority,
+              value: choreDetails.priority,
+            ),
+            ChoreDetailsSingleRow(
               label: Strings.createdAt,
               value: choreDetails.createdAt,
             ),
