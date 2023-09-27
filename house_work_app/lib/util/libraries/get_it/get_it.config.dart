@@ -22,9 +22,7 @@ import 'package:house_work_app/domain/repository/house_work_repository.dart'
     as _i8;
 import 'package:house_work_app/domain/use_case/get_family_member_info_use_case.dart'
     as _i10;
-import 'package:house_work_app/presentation/screens/homeScreen/bloc/home_bloc.dart'
-    as _i11;
-import 'package:house_work_app/services/app_module.dart' as _i12;
+import 'package:house_work_app/services/app_module.dart' as _i11;
 import 'package:house_work_app/util/libraries/firebase/firebase_service.dart'
     as _i5;
 import 'package:injectable/injectable.dart' as _i2;
@@ -52,10 +50,8 @@ extension GetItInjectableX on _i1.GetIt {
         remoteDataSource: gh<_i6.RemoteDataSource>()));
     gh.lazySingleton<_i10.GetFamilyInfoUseCase>(() => _i10.GetFamilyInfoUseCase(
         houseWorkRepository: gh<_i8.HouseWorkRepository>()));
-    gh.factory<_i11.HomeBloc>(() =>
-        _i11.HomeBloc(getFamilyInfoUseCase: gh<_i10.GetFamilyInfoUseCase>()));
     return this;
   }
 }
 
-class _$AppModule extends _i12.AppModule {}
+class _$AppModule extends _i11.AppModule {}
