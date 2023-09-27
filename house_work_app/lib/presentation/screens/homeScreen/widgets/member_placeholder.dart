@@ -2,40 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
 
-class MemberPlaceholder extends StatefulWidget {
+class MemberPlaceholder extends StatelessWidget {
   final String name;
-  bool isSelected;
+  final bool isSelected;
+  final Function(bool) onToggle;
 
-  MemberPlaceholder({
+  const MemberPlaceholder({
     required this.name,
-    this.isSelected = false,
+    required this.isSelected,
+    required this.onToggle,
   });
 
-  @override
-  State<MemberPlaceholder> createState() => _MemberPlaceholderState();
-}
-
-class _MemberPlaceholderState extends State<MemberPlaceholder> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        setState(() {
-          widget.isSelected = !widget.isSelected;
-        });
+        onToggle(!isSelected);
       },
       child: Column(
         children: [
           Center(
             child: Card(
-              color: widget.isSelected
-                  ? Colors.indigo.shade200
-                  : Colors.indigo.shade50,
+              color:
+                  isSelected ? Colors.indigo.shade200 : Colors.indigo.shade50,
               elevation: 5,
               child: Padding(
                 padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: CustomText(
-                  text: widget.name,
+                  text: name,
                   fontSize: Dimensions.fontSizeSmall,
                 ),
               ),

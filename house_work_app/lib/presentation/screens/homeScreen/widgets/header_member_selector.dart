@@ -3,7 +3,13 @@ import 'package:house_work_app/presentation/screens/homeScreen/widgets/member_pl
 import 'package:house_work_app/util/strings.dart';
 
 class HeaderMemberSelector extends StatelessWidget {
-  const HeaderMemberSelector({super.key});
+  final bool isSelected;
+  final Function(bool) onToggle;
+
+  const HeaderMemberSelector({
+    required this.isSelected,
+    required this.onToggle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +18,26 @@ class HeaderMemberSelector extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          MemberPlaceholder(name: Strings.leonarda),
-          MemberPlaceholder(name: Strings.dominik),
-          MemberPlaceholder(name: Strings.jasna),
-          MemberPlaceholder(name: Strings.drazen),
+          MemberPlaceholder(
+            name: Strings.leonarda,
+            isSelected: isSelected,
+            onToggle: onToggle,
+          ),
+          MemberPlaceholder(
+            name: Strings.dominik,
+            isSelected: isSelected,
+            onToggle: onToggle,
+          ),
+          MemberPlaceholder(
+            name: Strings.jasna,
+            isSelected: isSelected,
+            onToggle: onToggle,
+          ),
+          MemberPlaceholder(
+            name: Strings.drazen,
+            isSelected: isSelected,
+            onToggle: onToggle,
+          ),
         ],
       ),
     );

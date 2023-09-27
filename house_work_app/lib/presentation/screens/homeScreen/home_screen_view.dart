@@ -10,13 +10,24 @@ class HomeScreenView extends StatefulWidget {
 }
 
 class _HomeScreenViewState extends State<HomeScreenView> {
+  bool isSelected = false;
+
+  void toggleSelection(bool newValue) {
+    setState(() {
+      isSelected = newValue;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ColoredBox(
       color: Colors.grey.shade100,
       child: Column(
         children: [
-          const HeaderMemberSelector(),
+          HeaderMemberSelector(
+            isSelected: isSelected,
+            onToggle: toggleSelection,
+          ),
           ChoresBoard(),
         ],
       ),
