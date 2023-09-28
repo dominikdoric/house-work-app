@@ -429,6 +429,13 @@
             </list>
           </value>
         </entry>
+        <entry key="nested">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="package_config">
           <value>
             <list>
@@ -503,6 +510,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/pool-1.5.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="provider">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/provider-6.0.5/lib" />
             </list>
           </value>
         </entry>
@@ -756,6 +770,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/material_color_utilities-0.5.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/meta-1.9.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/mime-1.0.4/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/package_config-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/path-1.8.3/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/path_provider-2.1.1/lib" />
@@ -767,6 +782,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/platform-3.1.2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.6/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/pool-1.5.1/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/provider-6.0.5/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/pub_semver-2.1.4/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/pubspec_parse-1.2.3/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/recase-4.1.0/lib" />
