@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/widgets/custom_text.dart';
 import 'package:house_work_app/util/dimensions.dart';
+import 'package:house_work_app/util/family_member.dart';
 
 class MemberPlaceholder extends StatelessWidget {
-  final String name;
-  final String nameSelected;
-  final Function(String) setNameSelected;
+  final FamilyMember name;
+  final Function(String) clickedMember;
 
   const MemberPlaceholder({
     required this.name,
-    required this.nameSelected,
-    required this.setNameSelected,
+    required this.clickedMember,
   });
 
   @override
@@ -18,14 +17,14 @@ class MemberPlaceholder extends StatelessWidget {
     return InkWell(
       onTap: () {
         switch (name) {
-          case 'Leonarda':
-            setNameSelected('Leonarda');
-          case 'Dominik':
-            setNameSelected('Dominik');
-          case 'Jasna':
-            setNameSelected('Jasna');
-          case 'Drazen':
-            setNameSelected('Drazen');
+          case FamilyMember.Leonarda:
+            clickedMember('Leonarda');
+          case FamilyMember.Dominik:
+            clickedMember('Dominik');
+          case FamilyMember.Jasna:
+            clickedMember('Jasna');
+          case FamilyMember.Drazen:
+            clickedMember('Drazen');
         }
       },
       child: Column(
@@ -37,7 +36,7 @@ class MemberPlaceholder extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(Dimensions.paddingSmall),
                 child: CustomText(
-                  text: name,
+                  text: name.name,
                   fontSize: Dimensions.fontSizeSmall,
                 ),
               ),

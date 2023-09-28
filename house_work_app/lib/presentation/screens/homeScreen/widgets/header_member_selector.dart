@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:house_work_app/presentation/screens/homeScreen/widgets/member_placeholder.dart';
-import 'package:house_work_app/util/strings.dart';
+import 'package:house_work_app/util/family_member.dart';
 
 class HeaderMemberSelector extends StatelessWidget {
-  final String nameSelected;
-  final Function(String) setNameSelected;
+  final Function(String) clickedMember;
 
-  const HeaderMemberSelector({
-    required this.nameSelected,
-    required this.setNameSelected,
-  });
+  const HeaderMemberSelector({required this.clickedMember});
 
   @override
   Widget build(BuildContext context) {
@@ -19,24 +15,20 @@ class HeaderMemberSelector extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           MemberPlaceholder(
-            name: Strings.leonarda,
-            nameSelected: nameSelected,
-            setNameSelected: setNameSelected,
+            name: FamilyMember.Leonarda,
+            clickedMember: clickedMember,
           ),
           MemberPlaceholder(
-            name: Strings.dominik,
-            nameSelected: nameSelected,
-            setNameSelected: setNameSelected,
+            name: FamilyMember.Dominik,
+            clickedMember: clickedMember,
           ),
           MemberPlaceholder(
-            name: Strings.jasna,
-            nameSelected: nameSelected,
-            setNameSelected: setNameSelected,
+            name: FamilyMember.Jasna,
+            clickedMember: clickedMember,
           ),
           MemberPlaceholder(
-            name: Strings.drazen,
-            nameSelected: nameSelected,
-            setNameSelected: setNameSelected,
+            name: FamilyMember.Drazen,
+            clickedMember: clickedMember,
           ),
         ],
       ),

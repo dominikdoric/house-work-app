@@ -12,7 +12,7 @@ class HomeScreenView extends StatefulWidget {
 class _HomeScreenViewState extends State<HomeScreenView> {
   String nameSelected = 'Leonarda';
 
-  void setNameSelected(String newName) {
+  void clickedMember(String newName) {
     setState(() {
       nameSelected = newName;
     });
@@ -25,10 +25,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
       child: Column(
         children: [
           Text('Name selected: $nameSelected'),
-          HeaderMemberSelector(
-            nameSelected: nameSelected,
-            setNameSelected: setNameSelected,
-          ),
+          HeaderMemberSelector(clickedMember: clickedMember),
           ChoresBoard(),
         ],
       ),
