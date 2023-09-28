@@ -33,7 +33,7 @@ class ChoresBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 650.0,
+      height: 600.0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

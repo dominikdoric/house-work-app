@@ -10,11 +10,11 @@ class HomeScreenView extends StatefulWidget {
 }
 
 class _HomeScreenViewState extends State<HomeScreenView> {
-  bool isSelected = false;
+  String nameSelected = 'Leonarda';
 
-  void toggleSelection(bool newValue) {
+  void setNameSelected(String newName) {
     setState(() {
-      isSelected = newValue;
+      nameSelected = newName;
     });
   }
 
@@ -24,9 +24,10 @@ class _HomeScreenViewState extends State<HomeScreenView> {
       color: Colors.grey.shade100,
       child: Column(
         children: [
+          Text('Name selected: $nameSelected'),
           HeaderMemberSelector(
-            isSelected: isSelected,
-            onToggle: toggleSelection,
+            nameSelected: nameSelected,
+            setNameSelected: setNameSelected,
           ),
           ChoresBoard(),
         ],

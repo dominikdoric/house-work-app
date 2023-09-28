@@ -4,27 +4,35 @@ import 'package:house_work_app/util/dimensions.dart';
 
 class MemberPlaceholder extends StatelessWidget {
   final String name;
-  final bool isSelected;
-  final Function(bool) onToggle;
+  final String nameSelected;
+  final Function(String) setNameSelected;
 
   const MemberPlaceholder({
     required this.name,
-    required this.isSelected,
-    required this.onToggle,
+    required this.nameSelected,
+    required this.setNameSelected,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        onToggle(!isSelected);
+        switch (name) {
+          case 'Leonarda':
+            setNameSelected('Leonarda');
+          case 'Dominik':
+            setNameSelected('Dominik');
+          case 'Jasna':
+            setNameSelected('Jasna');
+          case 'Drazen':
+            setNameSelected('Drazen');
+        }
       },
       child: Column(
         children: [
           Center(
             child: Card(
-              color:
-                  isSelected ? Colors.indigo.shade200 : Colors.indigo.shade50,
+              color: Colors.indigo.shade50,
               elevation: 5,
               child: Padding(
                 padding: const EdgeInsets.all(Dimensions.paddingSmall),

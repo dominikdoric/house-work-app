@@ -38,7 +38,7 @@ class Strings {
   static const leonarda = 'Leonarda';
   static const dominik = 'Dominik';
   static const jasna = 'Jasna';
-  static const drazen = 'Dražen';
+  static const drazen = 'Drazen';
 
   // Chore
   static const createChore = 'Create new chore here!';
