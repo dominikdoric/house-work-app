@@ -22,7 +22,7 @@ class ChoreDetailsScreenView extends StatelessWidget {
             const Divider(),
             ChoreDetailsSingleRow(
               label: Strings.priority,
-              value: choreDetails.priority,
+              value: choreDetails.priority.name,
             ),
             const Divider(),
             ChoreDetailsSingleRow(
@@ -37,7 +37,7 @@ class ChoreDetailsScreenView extends StatelessWidget {
             const Divider(),
             ChoreDetailsSingleRow(
               label: Strings.status,
-              value: choreDetails.status,
+              value: choreDetails.status.name,
             ),
             const Divider(),
             ChoreDetailsSingleRow(

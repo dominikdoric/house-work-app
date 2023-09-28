@@ -1,13 +1,15 @@
 import 'package:flutter/foundation.dart';
+import 'package:house_work_app/util/chore_priority.dart';
+import 'package:house_work_app/util/chore_status.dart';
 
 class ChoreMock {
   final int id;
   final String name;
   final String description;
-  final String priority;
+  final ChorePriority priority;
   final String createdAt;
   final String beDoneBy;
-  final String status;
+  final ChoreStatus status;
 
   ChoreMock({
     required this.id,
@@ -21,10 +23,10 @@ class ChoreMock {
 
   String get getName => name;
   String get getDescription => description;
-  String get getPriority => priority;
+  ChorePriority get getPriority => priority;
   String get getCreatedAt => createdAt;
   String get getBeDoneBy => beDoneBy;
-  String get getStatus => status;
+  ChoreStatus get getStatus => status;
 
   void displayInfo() {
     if (kDebugMode) {

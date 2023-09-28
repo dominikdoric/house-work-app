@@ -22,6 +22,6 @@ ChoreDTO fromChoreMock(ChoreMock choreMock) {
     description: choreMock.description,
     createdAt: choreMock.createdAt,
     beDoneBy: choreMock.beDoneBy,
-    status: choreMock.status,
+    status: choreMock.status.name,
   );
 }
