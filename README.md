@@ -19,7 +19,6 @@ We are actively working on addressing the following known issues:
 
 - [Introduction](#introduction)
 - [Key Features](#key-features)
-- [Screenshots](#screenshots)
 - [How It Works](#how-it-works)
 - [Architecture](#architecture)
 - [Get Started](#get-started)
@@ -36,17 +35,6 @@ HouseWork is designed to simplify and enhance the household chore management exp
 - **Real-time Collaboration**: Enjoy real-time collaboration with your family members, making chore assignment and tracking a breeze.
 - **Chore Details**: Dive into the specifics of each chore, such as due dates, descriptions, and assigned family members.
 - **Firebase Integration**: Our backend, powered by Firebase, ensures data persistence and synchronization across devices.
-
-## Screenshots
-
-![Onboarding Screen](screenshots/onboarding.png)
-*Onboarding: Create your family profile*
-
-![Task Management](screenshots/task_management.png)
-*Task Management: Organize chores efficiently*
-
-![Chore Details](screenshots/chore_details.png)
-*Chore Details: Dive into task specifics*
 
 ## How It Works
 
