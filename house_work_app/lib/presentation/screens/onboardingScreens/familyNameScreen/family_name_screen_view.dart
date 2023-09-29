@@ -25,18 +25,21 @@ class FamilyNameScreenView extends StatelessWidget {
               labelText: Strings.familyName,
               hintText: Strings.familyName,
             ),
-            OutlinedButton(
-              child: const Text(
-                Strings.submit,
-                style: TextStyle(fontSize: Dimensions.fontSizeMedium),
+            Padding(
+              padding: const EdgeInsets.all(Dimensions.paddingMedium),
+              child: OutlinedButton(
+                child: const Text(
+                  Strings.submit,
+                  style: TextStyle(fontSize: Dimensions.fontSizeMedium),
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const FamilyCountScreen(),
+                    ),
+                  );
+                },
               ),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const FamilyCountScreen(),
-                  ),
-                );
-              },
             ),
           ],
         ),

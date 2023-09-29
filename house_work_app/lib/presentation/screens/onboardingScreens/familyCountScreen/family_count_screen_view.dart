@@ -25,15 +25,18 @@ class FamilyCountScreenView extends StatelessWidget {
               labelText: Strings.familyMembersCount,
               hintText: Strings.familyMembersCount,
             ),
-            OutlinedButton(
-              child: const CustomText(text: Strings.submit),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const FamilyDescriptionScreen(),
-                  ),
-                );
-              },
+            Padding(
+              padding: const EdgeInsets.all(Dimensions.paddingMedium),
+              child: OutlinedButton(
+                child: const CustomText(text: Strings.submit),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const FamilyDescriptionScreen(),
+                    ),
+                  );
+                },
+              ),
             ),
           ],
         ),
