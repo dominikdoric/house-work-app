@@ -4,6 +4,17 @@
 
 Welcome to HouseWork, the revolutionary Flutter-based application that transforms the way families manage household chores. Our mission is to make chores not only organized but also fun, fostering collaboration and harmony within your family.
 
+## Development Status
+
+HouseWork is currently under active development and is not considered a stable release. While it offers a range of features and functionality, please be aware that there may be bugs and incomplete features.
+
+### Known Issues
+
+We are actively working on addressing the following known issues:
+
+- [Issue 1](link-to-issue-1): Describe the issue briefly.
+- [Issue 2](link-to-issue-2): Describe the issue briefly.
+
 ## Table of Contents
 
 - [Introduction](#introduction)
