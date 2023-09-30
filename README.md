@@ -1,6 +1,8 @@
 # HouseWork - Organize and Enjoy House Chores with Your Family
 
-![HouseWork Logo](link-to-your-logo.png)
+<p align="center">
+  <img src="https://github.com/dominikdoric/house-work-app/blob/develop/house_work_app/lib/util/images/home_screenshot.png" alt="HouseWork Logo" width="300" style="vertical-align: middle;"/>
+</p>
 
 Welcome to HouseWork, the revolutionary Flutter-based application that transforms the way families manage household chores. Our mission is to make chores not only organized but also fun, fostering collaboration and harmony within your family.
 
@@ -21,7 +23,6 @@ We are actively working on addressing the following known issues:
 - [Key Features](#key-features)
 - [How It Works](#how-it-works)
 - [Architecture](#architecture)
-- [Get Started](#get-started)
 - [License](#license)
 
 ## Introduction
